@@ -1,0 +1,288 @@
+[
+  {
+    "id": "TEB-REG-0001",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "உங்கள் மன்றியில் இருந்து விரல் அனுப்புகிறேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize the formal register and translate respectfully: 'I am sending a letter from your office'.",
+    "references": [
+      "I am sending a letter from your office.",
+      "I am mailing a letter from your office.",
+      "I am posting a letter from your office."
+    ],
+    "glossary": [],
+    "context": "Formal written Tamil (உங்கள் = your, honorific).",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["honorific_address", "formal_register"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["letter", "Letter", "mail", "post"], "description": "'letter' must appear."},
+      {"kind": "must_contain", "value": ["office", "Office"], "description": "'office' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Register must remain formal; slangy renderings are errors."
+  },
+  {
+    "id": "TEB-REG-0002",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "உன் மன்றில இருந்து விரல் பத்துகிறேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize the casual register and translate naturally: 'I'm sending a letter from your office'.",
+    "references": [
+      "I'm sending a letter from your place.",
+      "I am sending a letter from your office.",
+      "Sending a letter from your office."
+    ],
+    "glossary": [],
+    "context": "Colloquial Tamil (உன் = your, intimate; மன்றில = in the house/office, casual).",
+    "difficulty": "medium",
+    "register": "informal",
+    "phenomena": ["intimate_address", "colloquial_register"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["letter", "Letter", "mail", "post"], "description": "'letter' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Paired with REG-0001: same meaning, different register. Compare handling."
+  },
+  {
+    "id": "TEB-REG-0003",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "சாப்பிட்டே?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize the intimate colloquial question 'Did you eat?' and translate casually.",
+    "references": [
+      "Did you eat?",
+      "Have you eaten?",
+      "Did you have food?"
+    ],
+    "glossary": [],
+    "context": "Informal Tamil question between friends/family.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["colloquial_question", "intimacy"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["eat", "Eat", "eaten", "food", "had"], "description": "Eating must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Contrast with formal 'சாப்பிட்டீர்களா?'."
+  },
+  {
+    "id": "TEB-REG-0004",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "சாப்பிட்டீர்களா?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize the formal/polite question 'Have you eaten?' and translate politely.",
+    "references": [
+      "Have you eaten?",
+      "Have you had your meal?",
+      "Did you eat?"
+    ],
+    "glossary": [],
+    "context": "Polite Tamil question to an elder or stranger.",
+    "difficulty": "easy",
+    "register": "formal",
+    "phenomena": ["polite_question", "honorific"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["eat", "Eat", "eaten", "food", "meal", "had"], "description": "Eating must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Paired with REG-0003: identical core meaning, formal register."
+  },
+  {
+    "id": "TEB-REG-0005",
+    "category": "register_formality",
+    "task_type": "translation_with_register",
+    "direction": "en->ta",
+    "source_text": "I would be grateful if you could attend the meeting.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce formal Tamil conveying polite obligation.",
+    "references": [
+      "நீங்கள் கூட்டத்தில் கலந்து கொண்டால் நான் நன்றியடைவேன்.",
+      "நீங்கள் கூட்டத்தில் இருப்பதால் எனக்கு மிகவும் நன்றியாக இருக்கும்.",
+      "கூட்டத்தில் கலந்து கொண்டால் எனக்கு மிகுந்த நன்றி."
+    ],
+    "glossary": [
+      {"term": "meeting", "translation": "கூட்டம்", "language": "en"}
+    ],
+    "context": "Formal business invitation.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["conditional_politeness", "formal_register"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["கூட்டம்"], "description": "'meeting' must appear."},
+      {"kind": "must_contain", "value": ["நீங்கள்"], "description": "Honorific 'you' must be used."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Using casual 'நீ' would be a register error."
+  },
+  {
+    "id": "TEB-REG-0006",
+    "category": "register_formality",
+    "task_type": "translation_with_register",
+    "direction": "en->ta",
+    "source_text": "Hey, come to my place tonight!",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce colloquial Tamil matching the casual tone.",
+    "references": [
+      "ஏ, இன்று இரவு என் இடத்துக்கு வா!",
+      "ஏய், இன்று காலை என் வீட்டுக்கு வா.",
+      "ஏ, இன்று ராத்திரி என்னோட இடத்துக்கு வங்க."
+    ],
+    "glossary": [],
+    "context": "Casual invitation among friends.",
+    "difficulty": "medium",
+    "register": "informal",
+    "phenomena": ["colloquial_imperative", "register_matching"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வா", "வங்க", "வாங்க"], "description": "Casual 'come' imperative must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Overly formal translation (வருங்கள்) loses the casual tone; acceptable but weaker."
+  },
+  {
+    "id": "TEB-REG-0007",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "அவர்கள் காலமாக வந்தார்கள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate with the respectful third person: 'They/He came on time' (honorific).",
+    "references": [
+      "They came on time.",
+      "He came on time.",
+      "They arrived on time."
+    ],
+    "glossary": [],
+    "context": "Honorific third-person statement.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["honorific_verb", "gender_neutral_respect"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["on time", "in time", "on-time"], "description": "Timeliness must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "அவர்கள் is respectful singular or plural; either English reading is valid."
+  },
+  {
+    "id": "TEB-REG-0008",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "அவங்க நேரத்துக்கு வந்தாங்க.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize casual register and translate informally: 'They/He came on time'.",
+    "references": [
+      "They came on time.",
+      "He came right on time.",
+      "They turned up on time."
+    ],
+    "glossary": [],
+    "context": "Casual spoken Tamil.",
+    "difficulty": "medium",
+    "register": "informal",
+    "phenomena": ["colloquial_pronoun", "past_tense"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["on time", "in time", "on-time", "right on time"], "description": "Timeliness must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Paired with REG-0007: same facts, casual register."
+  },
+  {
+    "id": "TEB-REG-0009",
+    "category": "register_formality",
+    "task_type": "translation_with_register",
+    "direction": "en->ta",
+    "source_text": "Could you kindly share the invoice details?",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce polite formal Tamil requesting invoice details.",
+    "references": [
+      "தயவுசெய்து இலவசக் கணக்கின் விவரங்களைப் பகிர்ந்து கொள்ள முடியுமா?",
+      "தயவுசெய்து இலவசக் கணக்கு விவரங்களை அனுப்புங்கள்.",
+      "இலவசக் கணக்கின் விவரங்களைத் தயவுசெய்து பகிர்ந்து கொள்ளுங்கள்."
+    ],
+    "glossary": [
+      {"term": "invoice", "translation": "இலவசக் கணக்கு", "language": "en"}
+    ],
+    "context": "B2B email request.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["polite_request", "business_register"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["இலவசக் கணக்கு", "இலவச கணக்கு", "இலவசக்கணக்கு"], "description": "'invoice' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Consistency with domain glossary required."
+  },
+  {
+    "id": "TEB-REG-0010",
+    "category": "register_formality",
+    "task_type": "register_discrimination",
+    "direction": "ta->en",
+    "source_text": "அது சொல்லுங்க.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize casual imperative and translate as 'Tell that' / 'Say it'.",
+    "references": [
+      "Say it.",
+      "Tell me that.",
+      "Go ahead, say it."
+    ],
+    "glossary": [],
+    "context": "Casual command to a peer.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["casual_imperative"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["say", "Say", "tell", "Tell"], "description": "Speaking action must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Contrast formal 'அது சொல்லுங்கள்'."
+  }
+]

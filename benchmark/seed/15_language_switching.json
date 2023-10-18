@@ -1,0 +1,293 @@
+[
+  {
+    "id": "TEB-SWI-0001",
+    "category": "language_switching",
+    "task_type": "response_generation",
+    "direction": "mixed->ta",
+    "source_text": "வாழ்க்கை என்ன? Life எப்படி இருக்கு?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Respond in Tamil to the code-mixed 'how is life' question.",
+    "references": [
+      "வாழ்க்கை நல்லா இருக்கு. உன்னை ஏதாவது சவால் இருக்கா?",
+      "வாழ்க்கை நன்றாக இருக்கிறது. நீங்கள் எப்படி இருக்கீர்கள்?",
+      "நல்லா இருக்கு வாழ்க்கை. என்ன செய்யப் போகிறீங்க?"
+    ],
+    "glossary": [],
+    "context": "Casual code-mixed greeting.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_switching", "greeting"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வாழ்க்கை", "நல்லா", "நன்றாக", "சரி"], "description": "Life/wellbeing mention must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Output language should be Tamil."
+  },
+  {
+    "id": "TEB-SWI-0002",
+    "category": "language_switching",
+    "task_type": "response_generation",
+    "direction": "mixed->en",
+    "source_text": "I need a காபி immediately. வாங்க!",
+    "source_script": "mixed",
+    "source_language": "en+ta",
+    "target_language": "en",
+    "expected_behavior": "Respond in English acknowledging the urgent coffee request.",
+    "references": [
+      "I will get you a coffee right away.",
+      "Coming right up with your coffee.",
+      "Sure, here is your coffee immediately."
+    ],
+    "glossary": [
+      {"term": "காபி", "translation": "coffee", "language": "ta"}
+    ],
+    "context": "Urgent code-mixed request.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_switching", "urgency"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["coffee", "Coffee"], "description": "Coffee must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Must parse காபி = coffee and வாங்க = take/hurry."
+  },
+  {
+    "id": "TEB-SWI-0003",
+    "category": "language_switching",
+    "task_type": "register_adaptation",
+    "direction": "ta->ta",
+    "source_text": "வாடிக்கையாளர்: என் பொருள் காய்க்கப்பட்டுட்டு. உங்க பொறுப்பு தெரியுமா?\nஆதரவு: மன்னிக்கவும், தயவுசெய்து உங்கள் ஆர்டர் எண்ணைத் தெரிவிக்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Continue professionally: keep formal register in Tamil, ask for order number.",
+    "references": [
+      "மன்னிக்கவும், பொருள் சேதம் பதிவு செய்யப்பட்டது. உங்கள் ஆர்டர் எண்ணைத் தெரிவிக்கவும்.",
+      "உங்கள் ஆர்டர் எண்ணைத் தயவுசெய்து கூறுங்கள்; சேதமான பொருள் மாற்றம் செய்யப்படும்.",
+      "மன்னிக்கவும். ஆர்டர் எண்ணை வழங்கினால் சேதப் பொருள் மாற்ற முடியும்."
+    ],
+    "glossary": [],
+    "context": "Support chat; customer is angry, agent stays formal.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["register_adaptation", "emotional_context"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["ஆர்டர் எண்", "ஆர்டர்"], "description": "Order number request must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Register must stay polite despite customer anger."
+  },
+  {
+    "id": "TEB-SWI-0004",
+    "category": "language_switching",
+    "task_type": "response_generation",
+    "direction": "mixed->ta",
+    "source_text": "Tomorrow சென்னைக்கு போகிறேன். Train ticket book செய்து தர.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Understand and respond in Tamil about booking a train ticket to Chennai for tomorrow.",
+    "references": [
+      "நாளை சென்னைக்கான ரயில் டிக்கெட் பதிவு செய்து கொடுக்கிறேன்.",
+      "நாளை சென்னைக்கு செல்லும் ரயில் டிக்கெட் இப்போதே பதிவு செய்கிறேன்.",
+      "சென்னைக்கான ரயில் டிக்கெட் நாளைக்கு பதிவு செய்யப்படுகிறது."
+    ],
+    "glossary": [
+      {"term": "train ticket", "translation": "ரயில் டிக்கெட்", "language": "en"}
+    ],
+    "context": "Travel booking in Tanglish.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_switching", "booking_intent"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["சென்னை"], "description": "Chennai must appear."},
+      {"kind": "must_contain", "value": ["ரயில்", "டிக்கெட்"], "description": "Train ticket must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Tomorrow + Chennai + train ticket all required."
+  },
+  {
+    "id": "TEB-SWI-0005",
+    "category": "language_switching",
+    "task_type": "response_generation",
+    "direction": "mixed->en",
+    "source_text": "This Tamil சொல் என்ன அர்த்தம்? 'பூமி'",
+    "source_script": "mixed",
+    "source_language": "en+ta",
+    "target_language": "en",
+    "expected_behavior": "Explain in English that 'பூமி' means earth/land/soil depending on context.",
+    "references": [
+      "The Tamil word 'பூமி' means earth, land, or soil depending on context.",
+      "'பூமி' means earth/land/soil in Tamil.",
+      "It means 'earth' or 'land' (also 'soil')."
+    ],
+    "glossary": [],
+    "context": "Word meaning request in code-mixed English-Tamil.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["code_switching", "word_meaning"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["earth", "Earth", "land", "Land", "soil", "Soil"], "description": "At least one sense must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Multiple senses should be acknowledged."
+  },
+  {
+    "id": "TEB-SWI-0006",
+    "category": "language_switching",
+    "task_type": "register_adaptation",
+    "direction": "ta->ta",
+    "source_text": "சகோ, எப்பவே வா. அப்பதான் பேசுவோம். இப்போது வேலை இருக்கு.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Reply matching the very casual register among friends.",
+    "references": [
+      "சரி, பின்னே வரேன். இப்போது வேலை தான்.",
+      "சரி சகோ, பிறகு சொல்லுவேன். இப்போது வேலையுள்ளது.",
+      "ஹாஸ், இப்போது வேலையா? பின்னே பேசுவோம்."
+    ],
+    "glossary": [],
+    "context": "Very casual friend chat.",
+    "difficulty": "medium",
+    "register": "informal",
+    "phenomena": ["register_adaptation", "colloquial"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வேலை"], "description": "Work must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Over-formal reply is a register mismatch."
+  },
+  {
+    "id": "TEB-SWI-0007",
+    "category": "language_switching",
+    "task_type": "response_generation",
+    "direction": "mixed->mixed",
+    "source_text": "Meeting மாற்றிட்டேன். இப்போது நாளை காலை 11 மணிக்கு இருக்கு. Can you make it?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta+en",
+    "expected_behavior": "Confirm the rescheduled meeting: tomorrow 11 AM, in the same code-mixed style or Tamil.",
+    "references": [
+      "Yes, I can make it tomorrow at 11 AM. நாளை காலை 11 மணிக்கு சரி.",
+      "சரி, நாளை காலை 11 மணிக்கு வர முடியும்.",
+      "Yes, tomorrow 11 AM works for me."
+    ],
+    "glossary": [],
+    "context": "Meeting reschedule confirmation.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["code_switching", "time_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["11"], "description": "Time 11 must be preserved."},
+      {"kind": "must_contain", "value": ["நாளை", "tomorrow", "Tomorrow"], "description": "Tomorrow must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Accept either language; time must be right."
+  },
+  {
+    "id": "TEB-SWI-0008",
+    "category": "language_switching",
+    "task_type": "register_adaptation",
+    "direction": "en->ta",
+    "source_text": "Switch to formal Tamil: I am writing regarding the complaint filed on 9 August.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce formal Tamil preserving the complaint date 9 August.",
+    "references": [
+      "ஆகஸ்ட் 9 அன்று பதிவு செய்யப்பட்ட புகார் குறித்து என்னைக் கடிதம் எழுதுகிறேன்.",
+      "ஆகஸ்ட் 9 ஆம் தேதி தொடர்பான புகார் குறித்த கடிதம் இது.",
+      "ஆகஸ்ட் 9 அன்று செய்யப்பட்ட புகார் பற்றி இதோ கடிதம்."
+    ],
+    "glossary": [
+      {"term": "complaint", "translation": "புகார்", "language": "en"}
+    ],
+    "context": "Explicit register-switch instruction.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["register_switch_instruction", "date_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["9"], "description": "Date 9 must appear."},
+      {"kind": "must_contain", "value": ["புகார்"], "description": "'complaint' glossary term must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Must obey the register switch to formal Tamil."
+  },
+  {
+    "id": "TEB-SWI-0009",
+    "category": "language_switching",
+    "task_type": "response_generation",
+    "direction": "mixed->en",
+    "source_text": "இந்த பாட்டு ரொம்ப சுவாரஸ்யம். This song is மிக அழகா இருக்கு.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand the mixed praise and respond in English agreeing the song is interesting/beautiful.",
+    "references": [
+      "Yes, the song is very interesting and beautiful.",
+      "I agree — the song is lovely.",
+      "The song is indeed very nice and beautiful."
+    ],
+    "glossary": [],
+    "context": "Code-mixed opinion about a song.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_switching", "opinion"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["song", "Song"], "description": "Song must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Two clauses both praise the song."
+  },
+  {
+    "id": "TEB-SWI-0010",
+    "category": "language_switching",
+    "task_type": "register_adaptation",
+    "direction": "ta->en",
+    "source_text": "அன்பே அ஧ிகாரியே, கடைசி நாளில் சென்ற கோரிக்கையை மீண்டும் கொண்டு வருகிறேன். தயவுசெய்து பார்க்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Respond in formal English as an official acknowledging the resubmitted request.",
+    "references": [
+      "Dear Sir/Madam, thank you for resubmitting the request from the final date. I will review it.",
+      "I acknowledge the resubmitted request and will review it.",
+      "Thank you for bringing the request back; I shall review it."
+    ],
+    "glossary": [
+      {"term": "கோரிக்கை", "translation": "request", "language": "ta"}
+    ],
+    "context": "Formal official correspondence.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["register_adaptation", "resubmission"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["request", "Request"], "description": "Request must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Output must stay formal English."
+  }
+]

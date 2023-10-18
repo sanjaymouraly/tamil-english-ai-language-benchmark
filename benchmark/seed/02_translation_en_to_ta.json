@@ -1,0 +1,313 @@
+[
+  {
+    "id": "TEB-E2T-0001",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "The meeting will start at 3 PM.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce natural Tamil preserving the time '3 PM'.",
+    "references": [
+      "கூட்டம் விடியல் 3 மணிக்கு தொடங்கும்.",
+      "கூட்டம் மாலை 3 மணிக்கு தொடங்கும்.",
+      "கூட்டம் விடியல் மூன்று மணிக்குத் தொடங்கும்."
+    ],
+    "glossary": [
+      {"term": "meeting", "translation": "கூட்டம்", "language": "en"}
+    ],
+    "context": "Workplace calendar notice.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["time_expression", "future_tense"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "3", "description": "The hour 3 must be preserved."},
+      {"kind": "must_contain", "value": ["கூட்டம்"], "description": "'meeting' must be translated as கூட்டம்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Accept either விடியல் or மாலை for PM."
+  },
+  {
+    "id": "TEB-E2T-0002",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "Please submit the report by Friday.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce formal Tamil with a polite request and the Friday deadline.",
+    "references": [
+      "தயவுசெய்து வெள்ளிக்கிழமை வரை அறிக்கையைச் சமர்ப்பிக்கவும்.",
+      "வெள்ளிக்கிழமை வரை அறிக்கையைச் சமர்ப்பிக்க தயவுசெய்யும்.",
+      "தயவுசெய்து வெள்ளிக்கிழமைக்குள் அறிக்கையை சமர்ப்பிக்கவும்."
+    ],
+    "glossary": [
+      {"term": "report", "translation": "அறிக்கை", "language": "en"},
+      {"term": "submit", "translation": "சமர்ப்பிக்க", "language": "en"}
+    ],
+    "context": "Manager to team member.",
+    "difficulty": "easy",
+    "register": "formal",
+    "phenomena": ["politeness", "deadline"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வெள்ளிக்கிழமை"], "description": "Friday must appear."},
+      {"kind": "must_contain", "value": ["அறிக்கை"], "description": "'report' must be translated as அறிக்கை."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Polite imperative form expected; casual 'சமர்ப்பி' would be a register error."
+  },
+  {
+    "id": "TEB-E2T-0003",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "The price of rice has increased.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the subject (rice price) and the rise.",
+    "references": [
+      "அரிசி விலை அதிகரித்துள்ளது.",
+      "அரிசியின் விலை அதிகரித்துள்ளது.",
+      "அரிசி விலை உயர்ந்துள்ளது."
+    ],
+    "glossary": [
+      {"term": "price", "translation": "விலை", "language": "en"}
+    ],
+    "context": "Market news sentence.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["present_perfect"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["அரிசி"], "description": "'rice' must appear."},
+      {"kind": "must_contain", "value": ["விலை"], "description": "'price' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Must not say 'decreased' (குறைந்தது)."
+  },
+  {
+    "id": "TEB-E2T-0004",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "She can speak three languages.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the count 'three' and the ability meaning.",
+    "references": [
+      "அவள் மூன்று மொழிகளில் பேசலாம்.",
+      "அவள் மூன்று மொழிகளைப் பேச முடியும்.",
+      "அவள் மூன்று மொழிகளில் பேசுவாள்."
+    ],
+    "glossary": [],
+    "context": "Statement about language ability.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["modal_ability", "numeral"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["மூன்று", "3"], "description": "The number three must be preserved."},
+      {"kind": "must_contain", "value": ["மொழி"], "description": "'language(s)' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Numerals may be Tamil words or digits; both acceptable."
+  },
+  {
+    "id": "TEB-E2T-0005",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "Do not open this file.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the prohibition (do NOT open).",
+    "references": [
+      "இந்த கோப்பைத் திறக்காதே.",
+      "இந்த கோப்பைத் திறக்கவில்லை.",
+      "இந்தக் கோப்பைத் திறக்காதே."
+    ],
+    "glossary": [
+      {"term": "file", "translation": "கோப்பு", "language": "en"},
+      {"term": "open", "translation": "திற", "language": "en"}
+    ],
+    "context": "Computer security warning.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["negation", "imperative"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["கோப்பு"], "description": "'file' must appear."},
+      {"kind": "must_contain", "value": ["திறக்காதே", "திறக்காத", "திறக்க வேண்டாம்", "திறக்கவில்லை"], "description": "Prohibition must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Critical negation item; an affirmative translation is a hard failure."
+  },
+  {
+    "id": "TEB-E2T-0006",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "The train leaves at 6:45 AM.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the exact departure time 6:45 AM.",
+    "references": [
+      "ரயில் காலை 6:45 மணிக்கு வெளியேறுகிறது.",
+      "ரயில் காலை 6:45 மணிக்கு போகும்.",
+      "ரயில் காலை 6.45 மணிக்கு வெளியேறுகிறது."
+    ],
+    "glossary": [
+      {"term": "train", "translation": "ரயில்", "language": "en"}
+    ],
+    "context": "Travel information.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["time_expression", "numeric_precision"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["6:45", "6.45", "6 45"], "description": "Exact time 6:45 must be preserved."},
+      {"kind": "must_contain", "value": ["ரயில்"], "description": "'train' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Time format variants (6:45 / 6.45) are acceptable; 6:15 or 6:54 are failures."
+  },
+  {
+    "id": "TEB-E2T-0007",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "We need more time to finish this project.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the need for more time and the project reference.",
+    "references": [
+      "இந்த திட்டத்தை முடிக்க எங்களுக்கு கூடுதல் நேரம் தேவை.",
+      "இந்தத் திட்டத்தை முடிக்க மேலும் நேரம் தேவையாகும்.",
+      "இந்த திட்டத்தை முடிக்கும் வகையில் எங்களுக்கு கூடுதல் நேரம் வேண்டும்."
+    ],
+    "glossary": [
+      {"term": "project", "translation": "திட்டம்", "language": "en"}
+    ],
+    "context": "Project status communication.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["need_expression", "purpose_clause"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["திட்டம்"], "description": "'project' must appear."},
+      {"kind": "must_contain", "value": ["நேரம்"], "description": "'time' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Watch for mistranslating 'project' as திட்டம் vs பணி."
+  },
+  {
+    "id": "TEB-E2T-0008",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "The weather is very hot today.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate naturally with the intensifier and the day reference.",
+    "references": [
+      "இன்று வானிலை மிகவும் வெப்பமாக உள்ளது.",
+      "இன்று வானிலை மிக வெப்பமானது.",
+      "இன்று காற்றூடை மிகவும் கடுமையாக உள்ளது."
+    ],
+    "glossary": [
+      {"term": "weather", "translation": "வானிலை", "language": "en"}
+    ],
+    "context": "Small talk.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["degree_modifier"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["இன்று"], "description": "'today' must appear."},
+      {"kind": "must_contain", "value": ["வெப்பம்", "கடுமை", "வெப்ப"], "description": "Heat must be expressed."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Idiomatic alternatives like காற்றூடை கடுமை are acceptable."
+  },
+  {
+    "id": "TEB-E2T-0009",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "He returned the book to the library.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the return action and destination.",
+    "references": [
+      "அவன் புத்தகத்தை நூலகத்திற்குத் திருப்பினான்.",
+      "அவன் நூலகத்துக்கு புத்தகத்தைத் திருப்பினான்.",
+      "அவன் புத்தகத்தை நூலகத்தில் திருப்பினான்."
+    ],
+    "glossary": [
+      {"term": "library", "translation": "நூலகம்", "language": "en"}
+    ],
+    "context": "Simple past action.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["past_tense", "dative_destination"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["நூலகம்", "நூலகத்திற்கு", "நூலகத்துக்கு", "நூலகத்தில்"], "description": "'library' must appear."},
+      {"kind": "must_contain", "value": ["புத்தகம்", "புத்தகத்தை"], "description": "'book' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Verb must be a return verb (திருப்பி), not 'kept' (வைத்த)."
+  },
+  {
+    "id": "TEB-E2T-0010",
+    "category": "translation_en_to_ta",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "This application helps you learn Tamil.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the helping relation and the learning goal.",
+    "references": [
+      "இந்த பயன்பாடு தமிழ் கற்றுக்கொள்ள உங்களுக்கு உதவுகிறது.",
+      "இந்தப் பயன்பாடு உங்களுக்குத் தமிழ் கற்றுக்கொள்ள உதவுகிறது.",
+      "இந்த செயலி தமிழ் கற்றுக்கொள்ள உங்களுக்கு உதவுகிறது."
+    ],
+    "glossary": [
+      {"term": "application", "translation": "பயன்பாடு", "language": "en"},
+      {"term": "learn", "translation": "கற்றுக்கொள்", "language": "en"}
+    ],
+    "context": "App description.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["helping_verb", "infinitive_purpose"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தமிழ்"], "description": "'Tamil' must appear."},
+      {"kind": "must_contain", "value": ["பயன்பாடு", "செயலி", "பயன்பாட்டு"], "description": "'application' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "செயலி is an acceptable variant of பயன்பாடு."
+  }
+]

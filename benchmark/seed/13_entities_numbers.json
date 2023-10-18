@@ -1,0 +1,310 @@
+[
+  {
+    "id": "TEB-ENT-0001",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "கார்ப்பரேஷன் வங்கி கணக்கில் ₹5,00,000 உள்ளது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the amount ₹5,00,000 exactly.",
+    "references": [
+      "The corporation bank account has ₹5,00,000.",
+      "There is ₹5,00,000 in the corporation's bank account.",
+      "The corporation bank account holds ₹5,00,000."
+    ],
+    "glossary": [
+      {"term": "கார்ப்பரேஷன்", "translation": "corporation", "language": "ta"}
+    ],
+    "context": "Financial statement with Indian currency formatting.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["currency_amount", "lakh_formatting"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "5,00,000", "description": "Amount 5,00,000 must be preserved exactly."},
+      {"kind": "must_contain", "value": ["₹", "Rs", "INR", "rupee", "Rupee"], "description": "Currency marker must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional amount.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Indian digit grouping (lakh) must not be reformatted to 500,000 silently; either acceptable if value identical."
+  },
+  {
+    "id": "TEB-ENT-0002",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "கார் 3 மணி நேரத்தில் பயணித்தது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the duration '3 hours'.",
+    "references": [
+      "The car traveled for 3 hours.",
+      "The car journeyed for three hours.",
+      "The car traveled for three hours."
+    ],
+    "glossary": [],
+    "context": "Duration statement.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["duration", "numeral"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "3", "description": "3 hours must be preserved."},
+      {"kind": "must_contain", "value": ["hour", "Hour", "hr"], "description": "Hours unit must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Digit or word form both acceptable."
+  },
+  {
+    "id": "TEB-ENT-0003",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "The survey covered 12,500 households across 8 districts.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving 12,500 households and 8 districts.",
+    "references": [
+      "கண்காணிப்பு 8 மாவட்டங்களில் 12,500 குடும்பங்களைக் கவர்ந்தது.",
+      "12,500 குடும்பங்கள் கொண்ட 8 மாவட்டங்களில் கண்காணிப்பு நடத்தப்பட்டது.",
+      "8 மாவட்டங்களில் 12,500 வீடுகள் கண்காணிப்பில் அடங்கின."
+    ],
+    "glossary": [
+      {"term": "households", "translation": "குடும்பங்கள்", "language": "en"},
+      {"term": "districts", "translation": "மாவட்டங்கள்", "language": "en"}
+    ],
+    "context": "Survey statistics.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["large_numbers", "statistic_preservation"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "12,500", "description": "12,500 households must be preserved."},
+      {"kind": "numeric_preservation", "value": "8", "description": "8 districts must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional survey.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Both numbers are critical."
+  },
+  {
+    "id": "TEB-ENT-0004",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "கால்நடை விவசாயி 15 ஆண்டுகளாக பணியாற்றி வந்துள்ளார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the 15 years of work.",
+    "references": [
+      "The livestock farmer has worked for 15 years.",
+      "The cattle farmer has been working for 15 years.",
+      "The dairy farmer has worked for fifteen years."
+    ],
+    "glossary": [],
+    "context": "Occupational duration statement.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["years_duration", "numeral"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "15", "description": "15 years must be preserved."},
+      {"kind": "must_contain", "value": ["year", "Year"], "description": "Years unit must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Watch for '50 years' style digit-swap errors."
+  },
+  {
+    "id": "TEB-ENT-0005",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "The temperature fell to -2 degrees Celsius overnight.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the negative temperature -2 °C.",
+    "references": [
+      "இரவு நேரத்தில் வெப்பநிலை -2 டிக்ரி செல்சியஸ் ஆகக் குறைந்தது.",
+      "இரவு வெப்பநிலை -2 செல்சியஸ் டிக்ரிக்கு விழுந்தது.",
+      "ஒளிர்ந்த இரவில் வெப்பநிலை -2 டிக்ரி செல்சியஸ் ஆனது."
+    ],
+    "glossary": [
+      {"term": "Celsius", "translation": "செல்சியஸ்", "language": "en"}
+    ],
+    "context": "Weather report with negative value.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["negative_number", "unit_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["-2", "−2", "- 2"], "description": "Negative sign and 2 must be preserved."},
+      {"kind": "must_contain", "value": ["செல்சியஸ்", "Celsius", "டிக்ரி"], "description": "Temperature unit must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Dropping the minus sign flips the meaning — critical error."
+  },
+  {
+    "id": "TEB-ENT-0006",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "பள்ளி 5 கி.மீ தொலைவில் உள்ளது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving 5 km distance.",
+    "references": [
+      "The school is 5 km away.",
+      "The school is 5 kilometres away.",
+      "The school is located 5 km away."
+    ],
+    "glossary": [],
+    "context": "Distance statement.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["distance_unit", "abbreviation"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "5", "description": "5 must be preserved."},
+      {"kind": "must_contain", "value": ["km", "KM", "kilometre", "kilometer", "Kilometre", "Kilometer"], "description": "km unit must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Unit abbreviation கி.மீ must map to km/kilometre."
+  },
+  {
+    "id": "TEB-ENT-0007",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "She donated 1.5 litres of milk to the shelter.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the decimal quantity 1.5 litres.",
+    "references": [
+      "அவள் அற்றகத்திற்கு 1.5 லிட்டர் பால் நன்கொடை செய்தாள்.",
+      "அவள் அற்றகத்திற்கு ஒரு பாதி லிட்டர் பால் நன்கொடை செய்தாள்.",
+      "அற்றகத்திற்கு 1.5 லிட்டர் பால் அவளால் நன்கொடை செய்யப்பட்டது."
+    ],
+    "glossary": [
+      {"term": "shelter", "translation": "அற்றகம்", "language": "en"},
+      {"term": "milk", "translation": "பால்", "language": "en"}
+    ],
+    "context": "Donation statement with decimal quantity.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["decimal_quantity", "unit_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["1.5", "ஒரு பாதி"], "description": "1.5 litres must be preserved."},
+      {"kind": "must_contain", "value": ["பால்"], "description": "Milk must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Fractional amounts must not be rounded to 1 or 2 litres."
+  },
+  {
+    "id": "TEB-ENT-0008",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "15 மார்ச் 2025 அன்று கரார் கையெழுத்திடப்பட்டது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the full date 15 March 2025.",
+    "references": [
+      "The agreement was signed on 15 March 2025.",
+      "The contract was signed on March 15, 2025.",
+      "The agreement was signed on 15th March 2025."
+    ],
+    "glossary": [
+      {"term": "கரார்", "translation": "agreement", "language": "ta"}
+    ],
+    "context": "Legal document date.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["date_preservation", "day_month_year"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["15"], "description": "Day 15 must appear."},
+      {"kind": "must_contain", "value": ["2025"], "description": "Year 2025 must appear."},
+      {"kind": "must_contain", "value": ["March", "மார்ச்", "Mar"], "description": "Month must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional agreement.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Date order may vary; all three components must survive."
+  },
+  {
+    "id": "TEB-ENT-0009",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "en->ta",
+    "source_text": "Attend the workshop on 22 February at 4:30 PM.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the date 22 February and time 4:30 PM.",
+    "references": [
+      "பிப்ரவரி 22 அன்று விடியல் 4:30 மணிக்கு பயிற்சி வகுப்பில் கலந்து கொள்ளுங்கள்.",
+      "பிப்ரவரி 22 ஆம் தேதி மாலை 4:30 மணிக்கு பயிற்சியில் கலந்து கொள்ளுங்கள்.",
+      "பிப்ரவரி 22 அன்று மாலை 4.30 மணிக்கு வினாவிலக்கியத்தில் கலந்து கொள்ளுங்கள்."
+    ],
+    "glossary": [
+      {"term": "workshop", "translation": "பயிற்சி", "language": "en"}
+    ],
+    "context": "Event invitation with date and time.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["date_time_preservation", "colon_time"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["22"], "description": "Day 22 must appear."},
+      {"kind": "must_contain", "value": ["4:30", "4.30", "4 30"], "description": "Time 4:30 must appear."},
+      {"kind": "must_contain", "value": ["பிப்ரவரி", "பெப்ரவரி"], "description": "February must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional event.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Time may use colon or decimal point; both acceptable."
+  },
+  {
+    "id": "TEB-ENT-0010",
+    "category": "entities_numbers",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "ஊர் மக்கள் சபை 78% வாக்குகள் பெற்றது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the percentage 78%.",
+    "references": [
+      "The town council received 78% of the votes.",
+      "The panchayat won with 78% of the votes.",
+      "The village council got 78 percent of the votes."
+    ],
+    "glossary": [
+      {"term": "மக்கள் சபை", "translation": "town council", "language": "ta"}
+    ],
+    "context": "Election result with percentage.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["percentage", "numeric_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["78%", "78 percent", "78 per cent", "78%"], "description": "78% must be preserved."},
+      {"kind": "must_contain", "value": ["vote", "Vote"], "description": "Votes must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional result.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Percentage must not become 87% or 78 votes."
+  }
+]

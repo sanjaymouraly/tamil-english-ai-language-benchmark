@@ -1,0 +1,287 @@
+[
+  {
+    "id": "TEB-IDM-0001",
+    "category": "idiom_culture",
+    "task_type": "idiom_interpretation",
+    "direction": "ta->en",
+    "source_text": "கல்லில் பால் போட்டு உறுக்குதல்",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Interpret the idiom as 'an impossible task' (like milking a stone), not a literal reading.",
+    "references": [
+      "Milking a stone — an impossible task.",
+      "An utterly impossible undertaking (idiom: 'to milk a stone').",
+      "Trying to do something impossible."
+    ],
+    "glossary": [],
+    "context": "Common Tamil idiom.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["idiom", "cultural_equivalence"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["impossible", "Impossible", "cannot", "can't"], "description": "Impossibility meaning must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; idiom is traditional and public domain.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Literal translation ('putting milk on a stone') should be flagged as insufficient."
+  },
+  {
+    "id": "TEB-IDM-0002",
+    "category": "idiom_culture",
+    "task_type": "idiom_interpretation",
+    "direction": "ta->en",
+    "source_text": "மூன்று கண் கொடுத்தல்",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Interpret as 'to praise someone highly' (to give a third eye), not literally.",
+    "references": [
+      "To give a third eye — to praise someone highly.",
+      "To praise someone greatly (idiom: 'giving a third eye').",
+      "High praise; lauding someone."
+    ],
+    "glossary": [],
+    "context": "Tamil idiom about praise.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["idiom", "metaphor"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["praise", "Praise", "praising", "compliment", "laud"], "description": "Praise meaning must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; traditional idiom.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Watch for literal 'giving three eyes' mistranslation."
+  },
+  {
+    "id": "TEB-IDM-0003",
+    "category": "idiom_culture",
+    "task_type": "idiom_interpretation",
+    "direction": "ta->en",
+    "source_text": "குடம் தலையில் வைத்து ஓடுதல்",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Interpret as 'doing a difficult job in a hurry' (running with a pot on the head).",
+    "references": [
+      "Running with a pot on one's head — doing a difficult task hurriedly.",
+      "To hurry through a difficult job (idiom: 'running with a pot on the head').",
+      "Doing something hard in a rush."
+    ],
+    "glossary": [],
+    "context": "Tamil idiom about haste and difficulty.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["idiom", "cultural_image"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["hurry", "hastily", "rush", "hurried", "difficult", "Difficult"], "description": "Haste/difficulty meaning must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; traditional idiom.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Both 'pot' imagery and the hurried-difficulty sense matter."
+  },
+  {
+    "id": "TEB-IDM-0004",
+    "category": "idiom_culture",
+    "task_type": "cultural_explanation",
+    "direction": "ta->en",
+    "source_text": "வணக்கம் என்று சொல்லி கை இணைக்கிறார்கள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Explain the cultural greeting practice: saying 'Vanakkam' and joining hands.",
+    "references": [
+      "They greet by saying 'Vanakkam' and joining hands (a traditional Tamil salutation).",
+      "People say 'Vanakkam' and fold their hands as a greeting.",
+      "The Tamil greeting 'Vanakkam' is spoken with joined hands."
+    ],
+    "glossary": [
+      {"term": "வணக்கம்", "translation": "Vanakkam (Tamil greeting)", "language": "ta"}
+    ],
+    "context": "Cultural greeting custom.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["greeting", "cultural_practice"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["Vanakkam", "vanakkam"], "description": "The greeting word must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Transliteration 'Vanakkam' preferred over generic 'hello'."
+  },
+  {
+    "id": "TEB-IDM-0005",
+    "category": "idiom_culture",
+    "task_type": "idiom_interpretation",
+    "direction": "ta->en",
+    "source_text": "வாயிலை மாற்றிக்கொள்ளுதல்",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Interpret as 'change of fortune' (turning of the wind).",
+    "references": [
+      "A change of fortune (idiom: 'the wind turning direction').",
+      "The turning of the tide — a change in luck.",
+      "A shift in circumstances or luck."
+    ],
+    "glossary": [],
+    "context": "Tamil idiom about changing luck.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["idiom", "metaphor"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["fortune", "luck", "change", "turn"], "description": "Change-of-fortune meaning must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; traditional idiom.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Literal 'changing wind direction' alone is insufficient."
+  },
+  {
+    "id": "TEB-IDM-0006",
+    "category": "idiom_culture",
+    "task_type": "cultural_explanation",
+    "direction": "ta->en",
+    "source_text": "தாத்தா வீட்டுக்குள் வந்து குழந்தைகளை ஆரோக்கியமாக வைத்திருப்பார் என்று சொன்னார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate respecting the honorific: grandfather came home and said he would keep the children healthy.",
+    "references": [
+      "Grandfather came home and said he would keep the children healthy.",
+      "The grandfather visited the house and said he would keep the grandchildren healthy.",
+      "Grandpa came to the house and said he would look after the children's health."
+    ],
+    "glossary": [],
+    "context": "Family statement using the respectful term தாத்தா.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["kinship_term", "honorific"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["grandfather", "Grandfather", "grandpa", "Grandpa"], "description": "Grandfather must be mentioned."},
+      {"kind": "must_contain", "value": ["children", "Children", "grandchildren"], "description": "Children must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "தாத்தா is affectionate-respectful; 'grandfather' is the correct mapping."
+  },
+  {
+    "id": "TEB-IDM-0007",
+    "category": "idiom_culture",
+    "task_type": "cultural_explanation",
+    "direction": "ta->en",
+    "source_text": "இவர்கள் சாதி அணிந்து விழாக்கில் கலந்தவர்கள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Explain culturally: they attended the function wearing a sari (traditional garment).",
+    "references": [
+      "They attended the function wearing a sari (traditional garment).",
+      "They joined the celebration dressed in saris.",
+      "They came to the ceremony in saris."
+    ],
+    "glossary": [
+      {"term": "சாதி", "translation": "sari", "language": "ta"}
+    ],
+    "context": "Cultural attire at a function.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["cultural_dress", "gender_neutral_plural"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["sari", "saree", "Sari", "Saree"], "description": "Garment 'sari' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Do not mistranslate சாதி as a caste term here; context is attire."
+  },
+  {
+    "id": "TEB-IDM-0008",
+    "category": "idiom_culture",
+    "task_type": "idiom_interpretation",
+    "direction": "ta->en",
+    "source_text": "நெஞ்சை திறந்தல்",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Interpret as 'opening one's heart' — sharing feelings openly.",
+    "references": [
+      "Opening one's heart — sharing feelings openly.",
+      "To open up emotionally (idiom: 'opening the heart').",
+      "Baring one's heart."
+    ],
+    "glossary": [],
+    "context": "Emotional expression idiom.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["idiom", "emotion"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["heart", "Heart", "feelings", "open"], "description": "Heart/opening meaning must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Literal 'opening the heart' is acceptable if sense is conveyed."
+  },
+  {
+    "id": "TEB-IDM-0009",
+    "category": "idiom_culture",
+    "task_type": "idiom_interpretation",
+    "direction": "ta->en",
+    "source_text": "தமரை கத்தல்",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Interpret as 'spreading news/gossip' (beating the drum).",
+    "references": [
+      "Beating the drum — spreading news or gossip.",
+      "To spread news widely (idiom: 'drum beating').",
+      "Making news known to everyone."
+    ],
+    "glossary": [],
+    "context": "Idiom about announcing news.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["idiom"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["news", "News", "gossip", "spread", "announce"], "description": "News-spreading meaning must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; traditional idiom.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Literal drumming alone is insufficient without the news sense."
+  },
+  {
+    "id": "TEB-IDM-0010",
+    "category": "idiom_culture",
+    "task_type": "cultural_explanation",
+    "direction": "ta->en",
+    "source_text": "அவள் தம்பியாகிறாள் என்று அவர் சொன்னார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate carefully: 'she is being cheeky / acting up' in context of a mild reprimand, not a literal wrong word.",
+    "references": [
+      "He said she is being cheeky.",
+      "He said she is acting up.",
+      "He said she is misbehaving playfully."
+    ],
+    "glossary": [],
+    "context": "Colloquial reproach; 'தம்பி' here is slang for playful mischief.",
+    "difficulty": "hard",
+    "register": "informal",
+    "phenomena": ["slang", "cultural_context"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["cheeky", "mischief", "mischievous", "acting up", "playful", "misbehaving"], "description": "Playful-mischief sense must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "தம்பி literally means 'younger brother'; in slang it means 'acting cheeky'. Context decides."
+  }
+]

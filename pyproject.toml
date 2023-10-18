@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tamil-english-benchmark"
+version = "0.1.0"
+description = "Tamil-English AI Language Quality Benchmark (TEB) - bilingual evaluation platform"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{ name = "Sanjay Mouraly", email = "sanjaymouraly@users.noreply.github.com" }]
+requires-python = ">=3.11"
+keywords = ["tamil", "evaluation", "benchmark", "llm", "nlp", "translation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "streamlit>=1.32",
+    "typer>=0.12",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "plotly>=5.19",
+    "httpx>=0.27",
+    "pyarrow>=15",
+    "python-multipart>=0.0.9",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+local-embeddings = ["sentence-transformers>=2.7", "torch>=2.2"]
+openai-sdk = ["openai>=1.30"]
+anthropic-sdk = ["anthropic>=0.30"]
+
+[project.scripts]
+teb = "app.cli.main:app"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["benchmark/seed", "migrations/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = [
+    "E501",  # line length handled by formatter
+    "B008",  # typer.Argument/Option and pydantic Field in defaults are idiomatic
+    "UP042",  # (str, Enum) is intentional for JSON serialization
+]
+
+[tool.ruff.lint.per-file-ignores]
+# The Streamlit entry point must bootstrap sys.path (to make the `app`
+# package importable) before its own imports, so E402 is expected there.
+"app/ui/app.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+exclude = ["benchmark/seed", "migrations/versions"]
+
+[project.urls]
+Homepage = "https://github.com/sanjaymouraly/tamil-english-ai-language-benchmark"
+Repository = "https://github.com/sanjaymouraly/tamil-english-ai-language-benchmark"
+Issues = "https://github.com/sanjaymouraly/tamil-english-ai-language-benchmark/issues"
+

@@ -1,0 +1,296 @@
+[
+  {
+    "id": "TEB-SUP-0001",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->ta",
+    "source_text": "வாடிக்கையாளர்: என் ஆர்டர் எண் 4521 க்கான திரைப்படம் இன்று வரை வந்ததில்லை.\nஆதரவு: உங்கள் ஆர்டர் எண்ணை உறுதிப்படுத்திக் கொண்டு பார்க்கிறேன்.\nவாடிக்கையாளர்: இது மிக அவசியமானது, நேற்று தந்தபோது கிடைத்தீர்கள் என்று சொன்னீர்கள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Acknowledge the delay, reference order number 4521, and commit to checking the delivery status.",
+    "references": [
+      "ஆர்டர் எண் 4521 க்கான திரைப்படம் இன்று வரை வந்ததில்லை என்று பதிவு செய்துகொண்டேன். சாரணியின் நிலையை உடனடியாக பார்த்து உங்களுக்குத் தெரிவிப்பேன்.",
+      "உங்கள் ஆர்டர் 4521 இன் டிலிவரி நிலையைப் பார்த்து இன்றே தெரிவிக்கிறேன். மன்னிக்கவும்.",
+      "ஆர்டர் எண் 4521 பற்றிய புகார் பதிவு செய்யப்பட்டது. சாரணி நிலையை பார்த்து விளக்கமளிக்கிறேன்."
+    ],
+    "glossary": [
+      {"term": "order number", "translation": "ஆர்டர் எண்", "language": "en"},
+      {"term": "delivery", "translation": "டிலிவரி", "language": "en"}
+    ],
+    "context": "E-commerce support chat; complaint about late delivery.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["entity_preservation", "empathy", "multi_turn"],
+    "critical_constraints": [
+      {"kind": "entity_preservation", "value": "4521", "description": "Order number 4521 must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional order data only.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Empathy + entity preservation both required."
+  },
+  {
+    "id": "TEB-SUP-0002",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->en",
+    "source_text": "வாடிக்கையாளர்: என் கணக்கில் இருமடங்கு கட்டணம் வசூலிக்கப்பட்டது. திருப்பிக் கொடுங்கள்.\nஆதரவு: மன்னிக்கவும், கணக்கு விவரங்களை பார்க்க நான் உங்கள் கணக்கு எண்ணைக் கேட்கிறேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Respond empathetically to a double-charge complaint and request the account number to investigate.",
+    "references": [
+      "I'm sorry about the double charge. Please share your account number so I can investigate and arrange the refund.",
+      "I apologize for the duplicate charge. May I have your account number to verify and refund it?",
+      "Sorry for the inconvenience. To check the double charge, please provide your account number."
+    ],
+    "glossary": [
+      {"term": "refund", "translation": "திருப்பி கொடு", "language": "en"}
+    ],
+    "context": "Billing complaint; support must de-escalate and collect needed info.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["empathy", "billing", "information_request"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["account", "Account"], "description": "Must ask for the account number."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Refund promise without verification would be premature; good answers investigate first."
+  },
+  {
+    "id": "TEB-SUP-0003",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->ta",
+    "source_text": "வாடிக்கையாளர்: நான் வாங்கிய தொலைபேசி வார்த்தைகளை அழுத்தமாக இல்லை. மாற்று கோருகிறேன்.\nஆதரவு: தயவுசெய்து பொருளின் மாடல் எண்ணையும் வாங்கமுறை தேதியையும் தெரிவிக்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Respond by asking for the model number and purchase date for the replacement process.",
+    "references": [
+      "மாற்று செயல்முறைக்கு தொலைபேசி மாடல் எண்ணையும் வாங்கமுறை தேதியையும் தயவுசெய்து வழங்கவும்.",
+      "புரட்சிக்கப்பட்ட பொருளை மாற்ற மாடல் எண் மற்றும் கொள்ளுதல் தேதி தேவைப்படுகின்றன.",
+      "மாற்றுக்கான தகுதியை சரிபார்க்க, மாடல் எண் மற்றும் வாங்கமுறை தேதி தெரிவிக்கவும்."
+    ],
+    "glossary": [
+      {"term": "model number", "translation": "மாடல் எண்", "language": "en"}
+    ],
+    "context": "Electronics replacement request.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["information_request", "warranty_process"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["மாடல் எண்", "மாடல்"], "description": "Model number request must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Good support asks for verification details before promising a replacement."
+  },
+  {
+    "id": "TEB-SUP-0004",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "mixed->ta",
+    "source_text": "Customer: My internet connection இன்று காலை முதல் வேலை செய்யவில்லை. Restart செய்துப் பார்த்தேன்.\nAgent: உங்கள் connection problem பதிவு செய்யப்பட்டது.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Continue the support dialogue in a helpful tone, acknowledging the outage since morning and offering next steps.",
+    "references": [
+      "இன்று காலை முதல் இணைய இணைப்பு பிரச்சனை பதிவு செய்யப்பட்டுள்ளது. நாம் தொழில்நுட்ப அணுகுமுறையில் பார்த்து உங்களுக்குத் தெரிவிப்போம்.",
+      "இணையம் காலை முதல் வேலை செய்யாத பிரச்சனை பதிவு செய்யப்பட்டது. சில நேரத்தில் சரிப்பு நடக்கும்.",
+      "உங்கள் இணைய இணைப்பு பிரச்சனைக்கு காரணம் பார்க்கப்படுகிறது; மீண்டும் முயற்சித்து பார்க்கவும்."
+    ],
+    "glossary": [
+      {"term": "internet connection", "translation": "இணைய இணைப்பு", "language": "en"}
+    ],
+    "context": "Code-mixed ISP support chat.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["code_mixing", "service_outage"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["இணைய", "internet", "இணைப்பு"], "description": "Internet must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Response language can be Tamil; must acknowledge outage."
+  },
+  {
+    "id": "TEB-SUP-0005",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->en",
+    "source_text": "வாடிக்கையாளர்: எனக்கு கிடைத்த தேவைக்கான திரை சேதமாக இருக்கிறது. அதை மாற்ற வேண்டும்.\nஆதரவு: சேதமான திரையின் புகைப்படம் அனுப்புங்கள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Respond in English asking for a photo of the damaged screen and confirming replacement eligibility.",
+    "references": [
+      "I'm sorry to hear the screen is damaged. Please send a photo of the damage so we can confirm your replacement eligibility.",
+      "Please share a photo of the damaged screen; our team will verify and arrange the replacement.",
+      "Thanks for reporting. Kindly send a picture of the screen damage to proceed with the replacement."
+    ],
+    "glossary": [],
+    "context": "Hardware damage claim; output language is English.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["language_switch", "evidence_request"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["photo", "picture", "image"], "description": "Must request a photo."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Output must be English despite Tamil input."
+  },
+  {
+    "id": "TEB-SUP-0006",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->ta",
+    "source_text": "வாடிக்கையாளர்: நான் ஒரு வாரமாக என் ஆடர் பெறவில்லை. என் சமர்ப்பணை திரும்பப் பெறுமா?\nஆதரவு: உங்கள் சமர்ப்பணையின் நிலையைப் பார்த்து விளக்கமளிக்கிறேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Reply in Tamil, acknowledge the one-week wait, and commit to checking the submission status.",
+    "references": [
+      "ஒரு வாரமாக ஆர்டர் கிடைக்காத பொருள் மன்னிக்கவும். உங்கள் சமர்ப்பணையின் நிலையை இன்றே பார்த்து தெரிவிப்பேன்.",
+      "உங்கள் சமர்ப்பணை நிலை பார்க்கப்பட்டு விளக்கமளிக்கப்படுகிறது. ஆர்டர் செல்லுபடியாக இருக்கும்.",
+      "ஒரு வாரம் காத்திருப்பதற்கு மன்னிக்கவும்; சமர்ப்பணை நிலையைப் பார்த்து விடை தருகிறேன்."
+    ],
+    "glossary": [],
+    "context": "Week-long wait for an order.",
+    "difficulty": "easy",
+    "register": "formal",
+    "phenomena": ["time_duration", "status_inquiry"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வாரம்", "ஆர்டர்", "சமர்ப்பணை"], "description": "Duration/order/submission must be referenced."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Acknowledge the duration explicitly."
+  },
+  {
+    "id": "TEB-SUP-0007",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "mixed->en",
+    "source_text": "Customer: என் subscription renew ஆகவில்லை, பணம் கழிக்கப்பட்டது தான்.\nAgent: Subscription renewal issue noted.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Respond in English: acknowledge the failed renewal and the money deducted; offer to check the transaction.",
+    "references": [
+      "I understand your subscription did not renew but the amount was deducted. I can check the transaction and escalate it.",
+      "Sorry about the failed renewal with the charge. Please share the transaction date so I can verify the deduction.",
+      "Noted: subscription renewal failed but payment was debited. I will check the transaction status now."
+    ],
+    "glossary": [
+      {"term": "subscription", "translation": "subscription", "language": "en"}
+    ],
+    "context": "Code-mixed billing issue.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["code_mixing", "billing", "failed_transaction"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["subscription", "Subscription", "renewal", "Renewal"], "description": "Subscription/renewal must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Failed renewal + debit is the core issue."
+  },
+  {
+    "id": "TEB-SUP-0008",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->ta",
+    "source_text": "வாடிக்கையாளர்: என் குழந்தைக்கான பெயர் தயாரிப்பில் தவறாக எழுதப்பட்டுள்ளது. திருத்த முடியுமா?\nஆதரவு: பெயர் திருத்தல் கோரிக்கை பதிவு செய்யப்பட்டது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Confirm the name-correction request is logged and explain what is needed.",
+    "references": [
+      "குழந்தையின் பெயர் திருத்தல் கோரிக்கை பதிவு செய்யப்பட்டது. பிறப்புச் சான்றின் படிப்பை அனுப்பினால் திருத்தம் செய்யப்படும்.",
+      "பெயர் தவறு பதிவு செய்யப்பட்டது. சான்று ஆவணம் வழங்கினால் சரிப்பு நடக்கும்.",
+      "குழந்தை பெயர் திருத்தல் கோரிக்கைக்கு பிறப்புச் சான்று தேவைப்படும்."
+    ],
+    "glossary": [],
+    "context": "Personalized product name correction.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["correction_request", "document_request"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["பெயர்"], "description": "'name' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "PII caution: no real names used; synthetic only."
+  },
+  {
+    "id": "TEB-SUP-0009",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "en->ta",
+    "source_text": "Customer: The app crashes every time I open it. Please fix it. Agent: We are looking into the crash issue.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Continue the dialogue in Tamil, acknowledging the crash and asking for device details.",
+    "references": [
+      "செயலி திறக்கும்போது சிகிச்சைப்படுவது பதிவு செய்யப்பட்டது. உங்கள் சாதனம் மற்றும் செயலி பதிப்பைத் தெரிவிக்கவும்.",
+      "சிகிச்சை பிரச்சனை பார்க்கப்படுகிறது. சாதன மாதிரி மற்றும் இயக்க முறைமை விவரங்களைக் கொடுங்கள்.",
+      "செயலி சிகிச்சையாகும் சிக்கல் பதிவு செய்யப்பட்டது. புதுப்பிப்பை முயற்சித்து பார்க்கவும்."
+    ],
+    "glossary": [
+      {"term": "app", "translation": "செயலி", "language": "en"},
+      {"term": "crash", "translation": "சிகிச்சை", "language": "en"}
+    ],
+    "context": "App crash report; agent continues in Tamil.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["language_switch", "technical_support"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["செயலி", "சிகிச்சை"], "description": "App and crash must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Tests Tamil continuation of an English-initiated dialogue."
+  },
+  {
+    "id": "TEB-SUP-0010",
+    "category": "customer_support",
+    "task_type": "dialogue_response",
+    "direction": "ta->ta",
+    "source_text": "வாடிக்கையாளர்: தயாரிப்பு சரியாக வந்தது, ஆனால் பொறியின் வண்ணம் குறைந்தது. குறைபாடு பதிவு செய்யவும்.\nஆதரவு: குறைபாடு பதிவு செய்யப்பட்டது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Confirm the defect report (wrong color) is logged and mention next steps.",
+    "references": [
+      "வண்ணக் குறைபாடு பதிவு செய்யப்பட்டது. பரிசோதனை நிறைவின் பிறகு மாற்று தொடங்கப்படும்.",
+      "குறைபாடு பதிவு செய்யப்பட்டது. மாற்று செயல்முறையும் விளக்கப்படும்.",
+      "வண்ணக் குறைபாடு குறித்தப் பதிவு செய்யப்பட்டது; ஆய்வு நடக்கும்."
+    ],
+    "glossary": [],
+    "context": "Minor defect report on delivered product.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["defect_report", "logging_confirmation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["குறைபாடு", "பதிவு"], "description": "Defect logging must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional scenario.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Simple confirmation task; graded on completeness."
+  }
+]

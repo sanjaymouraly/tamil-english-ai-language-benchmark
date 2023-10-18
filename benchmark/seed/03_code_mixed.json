@@ -1,0 +1,301 @@
+[
+  {
+    "id": "TEB-CMX-0001",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "Today வானிலை மிகவும் வெப்பம் இருக்கு, ஆனால் நாளை rain இருக்கான்.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand the code-mixed statement and answer in English that it is very hot today but will rain tomorrow.",
+    "references": [
+      "The weather is very hot today, but it will rain tomorrow.",
+      "It is very hot today, but rain is expected tomorrow.",
+      "Today is very hot; tomorrow it will rain."
+    ],
+    "glossary": [],
+    "context": "Casual weather chat in Tanglish.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_mixing", "contrast"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["hot", "Hot"], "description": "Heat today must be mentioned."},
+      {"kind": "must_contain", "value": ["rain", "Rain"], "description": "Rain tomorrow must be mentioned."},
+      {"kind": "must_contain", "value": ["tomorrow", "Tomorrow"], "description": "Tomorrow must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; representative of common Tanglish usage.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Model must parse both scripts in one sentence."
+  },
+  {
+    "id": "TEB-CMX-0002",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "அவன் project deadline ஐ extend செய்துட்டான்.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand that he extended the project deadline.",
+    "references": [
+      "He extended the project deadline.",
+      "He has extended the project deadline.",
+      "He pushed the project deadline forward."
+    ],
+    "glossary": [
+      {"term": "deadline", "translation": "deadline", "language": "en"}
+    ],
+    "context": "Workplace Tanglish statement.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_mixing", "loanword_verb"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["extend", "Extend", "extended", "Extended", "pushed", "moved"], "description": "Extension must be mentioned."},
+      {"kind": "must_contain", "value": ["deadline", "Deadline"], "description": "'deadline' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "'செய்துட்டான்' indicates completed action with present relevance."
+  },
+  {
+    "id": "TEB-CMX-0003",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->ta",
+    "source_text": "Lunch எப்படி இருக்கு? ஹோட்டல் போகலாம்?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Understand the lunch invitation and respond appropriately in Tamil.",
+    "references": [
+      "சாப்பிட்டே நல்லா இருக்கு. ஹோட்டல்ல போகலாம்.",
+      "நல்லா இருக்கு, ஹோட்டல் போகலாம்.",
+      "சாப்பாடு நல்லா இல்ல, ஹோட்டல்ல போகலாம்."
+    ],
+    "glossary": [],
+    "context": "Friends planning lunch.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_mixing", "question_pair"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["ஹோட்டல்", "hotel", "Hotel"], "description": "Hotel reference must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Response should acknowledge the invitation."
+  },
+  {
+    "id": "TEB-CMX-0004",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->ta",
+    "source_text": "Mobile battery தீயாக இருக்கு, charger கொடுங்க.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Understand the request and respond appropriately (bring the charger).",
+    "references": [
+      "சார்ஜர் கொடுத்து கொண்டு வருகிறேன்.",
+      "சார்ஜர் வழங்குகிறேன்.",
+      "இதோ, சார்ஜர் எடுத்து வந்தேன்."
+    ],
+    "glossary": [
+      {"term": "charger", "translation": "சார்ஜர்", "language": "en"}
+    ],
+    "context": "Everyday request about a phone battery.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_mixing", "request"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["சார்ஜர்", "charger", "சார்ஜ்"], "description": "Charger must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Battery complaint + action request in one utterance."
+  },
+  {
+    "id": "TEB-CMX-0005",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "இந்த movie ரெண்டு hour அதிகம் நேரம் ஆகுது.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand that the movie is more than two hours long.",
+    "references": [
+      "This movie is more than two hours long.",
+      "The movie runs for over two hours.",
+      "This movie is over two hours long."
+    ],
+    "glossary": [],
+    "context": "Film discussion in Tanglish.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_mixing", "quantity"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["two hours", "2 hours", "2 hours", "two hour"], "description": "Duration must be preserved."},
+      {"kind": "must_contain", "value": ["more than", "over", "More than", "Over", "above", "longer than"], "description": "'More than' sense must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "ரெண்டு = two; அதிகம் = more than."
+  },
+  {
+    "id": "TEB-CMX-0006",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "நீங்க email send செய்தீங்களா?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand the yes/no question asking whether an email was sent.",
+    "references": [
+      "Did you send the email?",
+      "Have you sent the email?",
+      "Did you send an email?"
+    ],
+    "glossary": [],
+    "context": "Workplace check-in.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["code_mixing", "yes_no_question"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["email", "Email", "mail"], "description": "Email must be mentioned."},
+      {"kind": "must_contain", "value": ["send", "sent", "Send", "Sent"], "description": "Sending action must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Question particle ஆயா? marks yes/no question."
+  },
+  {
+    "id": "TEB-CMX-0007",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "Payment செய்து இருக்கேன், receipt காத்திருக்கு.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand that payment is done and the receipt is being awaited.",
+    "references": [
+      "I have made the payment; waiting for the receipt.",
+      "I made the payment and am waiting for the receipt.",
+      "Payment is done; I am waiting for the receipt."
+    ],
+    "glossary": [
+      {"term": "payment", "translation": "payment", "language": "en"},
+      {"term": "receipt", "translation": "receipt", "language": "en"}
+    ],
+    "context": "E-commerce customer message.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["code_mixing", "aspect"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["payment", "Payment", "paid"], "description": "Payment must be mentioned."},
+      {"kind": "must_contain", "value": ["receipt", "Receipt"], "description": "Receipt must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Two clauses; both must be captured."
+  },
+  {
+    "id": "TEB-CMX-0008",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "Teacher நீங்க homework கொடுத்தீங்க தான்.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand that the teacher gave homework.",
+    "references": [
+      "The teacher gave homework.",
+      "The teacher has given homework.",
+      "The teacher gave us homework."
+    ],
+    "glossary": [
+      {"term": "homework", "translation": "homework", "language": "en"}
+    ],
+    "context": "Student conversation.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["code_mixing", "past_action", "emphasis_particle"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["teacher", "Teacher"], "description": "Teacher must be mentioned."},
+      {"kind": "must_contain", "value": ["homework", "Homework", "assignment"], "description": "Homework must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "தான் adds emphasis/certainty, not a separate fact."
+  },
+  {
+    "id": "TEB-CMX-0009",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "கேட்க வேண்டிய கருத்து simple-ஆ இருக்கு.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand that the point to be asked is simple.",
+    "references": [
+      "The question to be asked is simple.",
+      "The point that needs to be asked is simple.",
+      "The question is simple."
+    ],
+    "glossary": [],
+    "context": "Meeting preparation remark.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["code_mixing", "relative_clause"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["simple", "Simple"], "description": "'simple' must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "simple-ஆ is a Tamilized English adjective."
+  },
+  {
+    "id": "TEB-CMX-0010",
+    "category": "code_mixed_understanding",
+    "task_type": "comprehension",
+    "direction": "mixed->en",
+    "source_text": "Download செய்ய இணையம் தேவை.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Understand that an internet connection is needed to download.",
+    "references": [
+      "An internet connection is needed to download.",
+      "You need the internet to download.",
+      "Internet is required for downloading."
+    ],
+    "glossary": [
+      {"term": "download", "translation": "download", "language": "en"}
+    ],
+    "context": "Tech support statement.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["code_mixing", "requirement"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["internet", "Internet", "connection"], "description": "Internet must be mentioned."},
+      {"kind": "must_contain", "value": ["download", "Download"], "description": "Download must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "இணையம் = internet."
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "id": "TEB-SAF-0001",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "ta->en",
+    "source_text": "இந்த மருந்தை நாளுக்கு இரண்டு முறை, ஒவ்வொரு முறையும் 5 மி.லி எடுக்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate the dosage EXACTLY: twice daily, 5 ml each time.",
+    "references": [
+      "Take this medicine twice a day, 5 ml each time.",
+      "Take 5 ml of this medicine two times a day.",
+      "Dosage: 5 ml twice daily."
+    ],
+    "glossary": [
+      {"term": "மருந்து", "translation": "medicine", "language": "ta"}
+    ],
+    "context": "Medical dosage instruction — high stakes.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["dosage", "frequency", "critical_numbers"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["5 ml", "5 ml", "5ml", "5 ml", "five ml", "5 millilitre", "5 milliliter"], "description": "Dose 5 ml must be exact."},
+      {"kind": "must_contain", "value": ["twice", "two times", "2 times", "two"], "description": "Twice daily must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional dosage.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Any change to 5 ml or twice is a critical failure."
+  },
+  {
+    "id": "TEB-SAF-0002",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "en->ta",
+    "source_text": "Do not take more than 2 tablets in 24 hours.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate the safety limit exactly: maximum 2 tablets in 24 hours.",
+    "references": [
+      "24 மணி நேரத்திற்குள் 2 மாதிரிகளை விட அதிகமாக எடுக்காதே.",
+      "ஒரு நாள் இருபது நாலு மணி நேரத்திற்குள் இரண்டு மாதிரிகள் மட்டுமே எடுக்கவும்.",
+      "24 மணி நேரத்திற்கு 2 மாதிரிகளுக்கு அதிகமாக வேண்டாம்."
+    ],
+    "glossary": [
+      {"term": "tablets", "translation": "மாதிரிகள்", "language": "en"}
+    ],
+    "context": "Medication safety limit.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["dosage_limit", "negation", "critical_numbers"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["2", "இரண்டு"], "description": "2 tablets must be preserved."},
+      {"kind": "must_contain", "value": ["24", "இருபது நாலு"], "description": "24 hours must be preserved."},
+      {"kind": "must_contain", "value": ["விட அதிகமாக", "விட அதிக", "காதே", "வேண்டாம்", "மட்டுமே"], "description": "Limit/prohibition must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional dosage.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Critical: number changes here are dangerous."
+  },
+  {
+    "id": "TEB-SAF-0003",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "ta->en",
+    "source_text": "அடுத்த மருந்து நேரம் காலை 7:30 மணிக்கு மட்டுமே.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate the exact next-dose time 7:30 AM.",
+    "references": [
+      "The next dose is only at 7:30 AM.",
+      "Next medicine time is 7:30 in the morning only.",
+      "Take the next dose only at 7:30 AM."
+    ],
+    "glossary": [
+      {"term": "மருந்து நேரம்", "translation": "medicine time", "language": "ta"}
+    ],
+    "context": "Medication schedule.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["time_precision", "critical_numbers"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["7:30", "7.30", "seven thirty", "7 30"], "description": "Time 7:30 must be exact."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional schedule.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "7:03, 7:13, or 7:50 are dangerous failures."
+  },
+  {
+    "id": "TEB-SAF-0004",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "en->ta",
+    "source_text": "This area is a flood zone. Evacuate to higher ground immediately.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate the emergency instruction clearly and urgently in Tamil.",
+    "references": [
+      "இந்த பகுதி வெள்ளக் குடும்பம் அச்சுறுத்தல் மண்டலம். உடனடியாக உயரமான நிலத்திற்குச் செல்லவும்.",
+      "இந்த மண்டலம் வெள்ளத் தாக்கம் மண்டலம். உடனடியாக உயரமான இடத்திற்கு தப்பிங்கள்.",
+      "இது வெள்ளக் காரணியான பகுதி. உடனடியாக உயரமான நிலத்திற்குப் போவுங்கள்."
+    ],
+    "glossary": [
+      {"term": "flood zone", "translation": "வெள்ளக் குடும்பம் மண்டலம்", "language": "en"},
+      {"term": "evacuate", "translation": "தப்பி", "language": "en"}
+    ],
+    "context": "Emergency alert.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["emergency_instruction", "urgency"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வெள்ள", "வெள்ளக்"], "description": "Flood must be mentioned."},
+      {"kind": "must_contain", "value": ["உயர", "உயரமான"], "description": "Higher ground must be mentioned."},
+      {"kind": "must_contain", "value": ["உடனடி", "உடனடியாக"], "description": "Immediately must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Urgency and direction must both survive."
+  },
+  {
+    "id": "TEB-SAF-0005",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "ta->en",
+    "source_text": "இந்த கட்டிடத்திற்கு நுழைவது தடைசெய்யப்பட்டுள்ளது. பாதுகாப்பு காரணமாக அருகில் செல்லாதே.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate the prohibition and safety warning exactly.",
+    "references": [
+      "Entry into this building is prohibited. Do not go near it for safety reasons.",
+      "This building is closed to entry; stay away for safety.",
+      "Access to this building is prohibited. Keep away for safety reasons."
+    ],
+    "glossary": [
+      {"term": "தடைசெய்யப்பட்டது", "translation": "prohibited", "language": "ta"}
+    ],
+    "context": "Hazard-site warning.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["prohibition", "safety_warning"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["prohibited", "Prohibited", "forbidden", "Forbidden", "not allowed", "closed"], "description": "Prohibition must be explicit."},
+      {"kind": "must_contain", "value": ["not go near", "stay away", "do not go", "keep away", "Do not go", "Stay away"], "description": "Stay-away instruction must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Softening the prohibition into a suggestion is an error."
+  },
+  {
+    "id": "TEB-SAF-0006",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "en->ta",
+    "source_text": "The patient is allergic to penicillin. Do not administer it.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate the allergy warning and prohibition into clear Tamil.",
+    "references": [
+      "நோயாளிக்கு பெனிசில்லினுக்கு அலர்ஜி உள்ளது. அதை கொடுக்காதே.",
+      "நோயாளிக்கு பெனிசிலின் அலர்ஜி உள்ளது. அதை அளிக்கவில்லை.",
+      "பெனிசில்லினுக்கு அலர்ஜி உள்ளதால் அதைக் கொடுக்காதே."
+    ],
+    "glossary": [
+      {"term": "allergic", "translation": "அலர்ஜி", "language": "en"},
+      {"term": "penicillin", "translation": "பெனிசில்லின்", "language": "en"}
+    ],
+    "context": "Medical allergy alert.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["allergy", "prohibition", "drug_name"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["பெனிசில்லின்", "பெனிசிலின்", "penicillin"], "description": "Drug name must appear."},
+      {"kind": "must_contain", "value": ["அலர்ஜி"], "description": "Allergy must be mentioned."},
+      {"kind": "must_contain", "value": ["கொடுக்காதே", "கொடுக்க வேண்டாம்", "அளிக்காதே", "வேண்டாம்"], "description": "Do-not-administer must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Dropping the prohibition is a critical failure."
+  },
+  {
+    "id": "TEB-SAF-0007",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "ta->en",
+    "source_text": "மணிக்கிற மின்சாரம் கம்பியில் கை வைத்து நீந்தாதே. 11,000 வோல்ட்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate the electrocution hazard preserving 11,000 volts exactly.",
+    "references": [
+      "Do not touch or swim near the electrified wire. 11,000 volts.",
+      "The electric wire is live. Do not touch or swim. 11,000 volts.",
+      "Keep hands off the electrified pole; do not swim. 11,000 volts."
+    ],
+    "glossary": [
+      {"term": "வோல்ட்", "translation": "volts", "language": "ta"}
+    ],
+    "context": "Electrical hazard warning.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["voltage_preservation", "prohibition", "critical_numbers"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["11,000", "11000", "eleven thousand"], "description": "11,000 volts must be preserved."},
+      {"kind": "must_contain", "value": ["not touch", "do not touch", "keep", "keep away", "do not swim", "not swim"], "description": "Prohibition must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional hazard sign.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Voltage digits are safety-critical."
+  },
+  {
+    "id": "TEB-SAF-0008",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "en->ta",
+    "source_text": "In case of fire, call 101 immediately.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the emergency number 101 exactly.",
+    "references": [
+      "தீயெழுந்தால் உடனடியாக 101-ஐ அழைக்கவும்.",
+      "தீ விபத்தில் உடனே 101 எண்ணைக் கூப்பிடவும்.",
+      "தீ எழுந்தால் உடனடியாக 101 அழைக்கவும்."
+    ],
+    "glossary": [
+      {"term": "fire", "translation": "தீ", "language": "en"}
+    ],
+    "context": "Emergency contact instruction.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["emergency_number", "critical_numbers"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["101"], "description": "Emergency number 101 must be exact."},
+      {"kind": "must_contain", "value": ["தீ", "தீயெழுந்த", "விபத்து"], "description": "Fire must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional emergency number for illustration.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Digit-level accuracy is mandatory."
+  },
+  {
+    "id": "TEB-SAF-0009",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "ta->en",
+    "source_text": "குழந்தைகளுக்கு இந்த மருந்து கொடுக்காதே. மருத்துவரை அழைக்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate: do NOT give this medicine to children; call a doctor.",
+    "references": [
+      "Do not give this medicine to children. Call a doctor.",
+      "Keep this medicine away from children; call a physician.",
+      "Do not administer this medicine to children. Call the doctor."
+    ],
+    "glossary": [
+      {"term": "குழந்தைகள்", "translation": "children", "language": "ta"},
+      {"term": "மருத்துவர்", "translation": "doctor", "language": "ta"}
+    ],
+    "context": "Child-safety medicine warning.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["prohibition", "vulnerable_group"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["children", "Children", "child", "Child"], "description": "Children must be mentioned."},
+      {"kind": "must_contain", "value": ["not give", "do not give", "Do not give", "not administer", "keep away"], "description": "Prohibition must be explicit."},
+      {"kind": "must_contain", "value": ["doctor", "Doctor", "physician"], "description": "Call a doctor must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Both the prohibition and the doctor instruction are critical."
+  },
+  {
+    "id": "TEB-SAF-0010",
+    "category": "safety_critical",
+    "task_type": "translation_accuracy",
+    "direction": "en->ta",
+    "source_text": "The bridge is closed to vehicles over 10 tonnes.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate preserving the 10-tonne weight limit and closure.",
+    "references": [
+      "10 டன் அதிகமான வாகனங்களுக்கு பாலம் மூடப்பட்டுள்ளது.",
+      "பாலத்திற்கு 10 டன் மீறிய வாகனங்கள் காத்திருக்கக் கூடாது.",
+      "10 டன் எடைக்கும் வாகனங்களுக்கு பாலம் மூடப்பட்டுள்ளது."
+    ],
+    "glossary": [
+      {"term": "bridge", "translation": "பாலம்", "language": "en"},
+      {"term": "tonnes", "translation": "டன்", "language": "en"}
+    ],
+    "context": "Structural load-limit sign.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["weight_limit", "critical_numbers", "closure"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["10"], "description": "10 tonnes must be preserved."},
+      {"kind": "must_contain", "value": ["பாலம்"], "description": "Bridge must appear."},
+      {"kind": "must_contain", "value": ["மூட", "காத்திருக்கக் கூடாது", "காத்திருக்காதே", "விலக்கப்பட்ட"], "description": "Closure/restriction must be explicit."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional sign.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Weight-limit digits are safety-critical."
+  }
+]

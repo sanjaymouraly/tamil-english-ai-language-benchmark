@@ -1,0 +1,285 @@
+[
+  {
+    "id": "TEB-AMB-0001",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "காய்கள் விற்கும் கடையில் அவன் பணியாற்றுகிறான். அவனுக்கு காய் வெட்டும் வேலை ரொம்ப சுகமா இல்ல.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Disambiguate 'காய்' as vegetables (shop context) and 'cutting vegetables' — not wounds.",
+    "references": [
+      "He works in a vegetable shop. Cutting vegetables is not very easy for him.",
+      "He works at a shop that sells vegetables; chopping vegetables is not easy for him.",
+      "He works in a grocery shop and finds cutting vegetables hard."
+    ],
+    "glossary": [],
+    "context": "Ambiguous word 'காய்' (vegetable vs wound) resolved by shop context.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["polysemy", "context_resolution"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["vegetable", "Vegetable", "vegetables", "Vegetables", "grocery"], "description": "Vegetable sense must be chosen."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Choosing 'wound' here is a context error."
+  },
+  {
+    "id": "TEB-AMB-0002",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "அவன் சைக்கிள் ஓட்டும்போது விழுந்து காய் பெற்றான். மருத்துவர் காயை வெட்டினார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Disambiguate 'காய்' as wound (fell while cycling; doctor cut the wound).",
+    "references": [
+      "He fell while cycling and got a wound. The doctor cut the wound.",
+      "He fell off his bicycle and got a wound; the doctor treated the wound.",
+      "While cycling he fell and was wounded; the doctor cut the wound."
+    ],
+    "glossary": [],
+    "context": "Ambiguous word 'காய்' resolved by fall/doctor context.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["polysemy", "context_resolution"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["wound", "Wound", "injury", "Injury", "cut"], "description": "Wound sense must be chosen."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Paired with AMB-0001: same word, opposite sense."
+  },
+  {
+    "id": "TEB-AMB-0003",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "மருந்து ஒரு படி எடுக்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Disambiguate 'படி' as dose: take one dose of medicine.",
+    "references": [
+      "Take one dose of medicine.",
+      "Take one dose of the medicine.",
+      "Take the medicine once (one dose)."
+    ],
+    "glossary": [
+      {"term": "படி", "translation": "dose", "language": "ta", "context": "medicine"}
+    ],
+    "context": "Medical instruction; படி = dose.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["polysemy", "medical_domain"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["dose", "Dose", "dosage"], "description": "Dose sense must be chosen."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Do not translate படி as 'step' or 'reading' here."
+  },
+  {
+    "id": "TEB-AMB-0004",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "படி படி நடந்து கொண்டேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Disambiguate 'படி படி' as step by step: I walked step by step.",
+    "references": [
+      "I walked step by step.",
+      "I walked slowly, step by step.",
+      "I kept walking step by step."
+    ],
+    "glossary": [],
+    "context": "Movement description; படி படி = step by step.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["polysemy", "reduplication"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["step", "Step", "slowly", "Slowly"], "description": "Step-by-step sense must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Paired with AMB-0003: same root word, different sense."
+  },
+  {
+    "id": "TEB-AMB-0005",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "அவன் கடல் பார்க்கிறான்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize the two readings: 'He is crossing (the sea/road)' or 'He is seeing the sea'; explain both unless context resolves.",
+    "references": [
+      "He is looking at the sea. (Alternatively: He is crossing it.)",
+      "He is seeing the sea — or, with the verb 'to cross', he is crossing the sea.",
+      "Ambiguous: 'He crosses the sea' or 'He sees the sea'."
+    ],
+    "glossary": [],
+    "context": "Homograph 'கடல்' (sea / to cross).",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["homograph", "ambiguity_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["sea", "Sea", "cross", "Cross"], "description": "At least one of the two senses must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Best answer flags the ambiguity rather than silently choosing one."
+  },
+  {
+    "id": "TEB-AMB-0006",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "அவன் வந்தான்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize அவன் can mean 'he' or 'that man'; translate as 'He came' (default) noting the demonstrative reading.",
+    "references": [
+      "He came.",
+      "He came. (Tamil 'அவன்' can also mean 'that man'.)",
+      "That man came."
+    ],
+    "glossary": [],
+    "context": "Deictic ambiguity of அவன்.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["deixis", "pronoun_ambiguity"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["came", "Came", "arrived", "Arrived"], "description": "Coming must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Both 'he' and 'that man' readings are acceptable; note the ambiguity."
+  },
+  {
+    "id": "TEB-AMB-0007",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "நீங்கள் வந்தீர்கள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize நீங்கள் is honorific/plural you; translate politely as 'You came' without wrongly pluralizing.",
+    "references": [
+      "You came.",
+      "You (formal) came.",
+      "You have come."
+    ],
+    "glossary": [],
+    "context": "Honorific pronoun ambiguity.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["honorific", "number_ambiguity"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["came", "Came", "come", "Come"], "description": "Coming must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "'You all came' is a defensible reading; 'you came' is the neutral polite reading."
+  },
+  {
+    "id": "TEB-AMB-0008",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "காட்டுக்கு செல்கிறேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize ambiguity: 'I am going outside' or 'I am going to the forest'; prefer 'outside' as default, note the alternative.",
+    "references": [
+      "I am going outside. (Can also mean 'going to the forest'.)",
+      "I am going out.",
+      "I am going to the forest / going outside."
+    ],
+    "glossary": [],
+    "context": "Ambiguous noun 'காடு' (forest) vs adverbial 'காட்டு' (outside).",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["homophone", "ambiguity_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["outside", "Outside", "out", "Out", "forest", "Forest"], "description": "One of the two senses must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Default reading is 'outside'; forest reading needs context."
+  },
+  {
+    "id": "TEB-AMB-0009",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "அது வீடு அழகானது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Recognize 'அது' can be 'that' (that house is beautiful) or possessive 'its'; default to demonstrative reading.",
+    "references": [
+      "That house is beautiful.",
+      "The house is beautiful.",
+      "That house is beautiful. (அது can also mean 'its'.)"
+    ],
+    "glossary": [],
+    "context": "Demonstrative vs possessive அது.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["deixis", "demonstrative"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["house", "House"], "description": "House must be mentioned."},
+      {"kind": "must_contain", "value": ["beautiful", "Beautiful"], "description": "Beautiful must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Possessive reading ('its house is beautiful') is grammatically odd without context."
+  },
+  {
+    "id": "TEB-AMB-0010",
+    "category": "ambiguity_context",
+    "task_type": "contextual_disambiguation",
+    "direction": "ta->en",
+    "source_text": "தாளத்தில் சாப்பிடுக.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Disambiguate 'தாளம்' as plate (eat on the plate), not 'time' (wait).",
+    "references": [
+      "Eat on the plate.",
+      "Eat it on the plate.",
+      "Have your food on the plate."
+    ],
+    "glossary": [],
+    "context": "Ambiguous word தாளம் (time/plate) resolved by the verb 'eat'.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["polysemy", "context_resolution"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["plate", "Plate"], "description": "Plate sense must be chosen."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Translating as 'wait' (time) would be a context error."
+  }
+]

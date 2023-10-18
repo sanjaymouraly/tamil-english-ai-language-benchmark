@@ -1,0 +1,19 @@
+{
+  "dataset_version": "1.0.0",
+  "partition": "test",
+  "categories": [],
+  "weights": {
+    "semantic_preservation": 0.45,
+    "terminology_consistency": 0.2,
+    "entity_number_preservation": 0.1,
+    "constraint_satisfaction": 0.15,
+    "script_validity": 0.05,
+    "completeness": 0.05
+  },
+  "thresholds": { "pass": 0.7 },
+  "include_judge": false,
+  "sampling_seed": 42,
+  "max_examples": null,
+  "temperature": 0.0,
+  "max_tokens": 1024
+}

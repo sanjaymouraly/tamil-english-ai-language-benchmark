@@ -1,0 +1,293 @@
+[
+  {
+    "id": "TEB-T2E-0001",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "நான் இன்று காலை 8 மணிக்கு பள்ளிக்குப் போகிறேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Produce a natural English translation preserving the time (8 o'clock) and the activity (going to school).",
+    "references": [
+      "I am going to school at 8 o'clock today morning.",
+      "I am going to school at 8 a.m. today.",
+      "Today I am going to school at 8 o'clock."
+    ],
+    "glossary": [],
+    "context": "Everyday morning routine statement.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["time_expression", "present_continuous"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "8", "description": "The hour 8 must be preserved."},
+      {"kind": "must_contain", "value": ["school", "School"], "description": "Destination 'school' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; not taken from any published corpus.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Simple declarative sentence; suitable as a warm-up item."
+  },
+  {
+    "id": "TEB-T2E-0002",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "அவள் காலை வணக்கம் சொன்னாள்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate naturally, keeping the reported-speech structure.",
+    "references": [
+      "She said good morning.",
+      "She wished good morning.",
+      "She said 'good morning'."
+    ],
+    "glossary": [],
+    "context": "Reported speech of a greeting.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["reported_speech", "greeting"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["good morning", "Good morning"], "description": "The greeting must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "'சொன்னாள்' is feminine past tense; avoid gender-neutral mistranslation is acceptable but 'she' is the intended reading."
+  },
+  {
+    "id": "TEB-T2E-0003",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "இந்த புத்தகம் மிகவும் சுவாரஸ்யமானது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate with the degree modifier 'very' and the adjective 'interesting'.",
+    "references": [
+      "This book is very interesting.",
+      "This book is extremely interesting.",
+      "This book is most interesting."
+    ],
+    "glossary": [],
+    "context": "Opinion statement about a book.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["degree_modifier", "adjective_predicate"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["interesting", "Interesting"], "description": "'interesting' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Watch for mistranslation of 'சுவாரஸ்யம்' as 'spice/taste'."
+  },
+  {
+    "id": "TEB-T2E-0004",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "நாங்கள் இன்று மாளிகைக்குப் போவதில்லை.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the NEGATION: the group is not going to the market today.",
+    "references": [
+      "We are not going to the market today.",
+      "We are not going to the market today.",
+      "Today we are not going to the market."
+    ],
+    "glossary": [],
+    "context": "Negated plan statement.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["negation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["not", "Not", "never", "no"], "description": "Negation must be explicit."},
+      {"kind": "must_not_contain", "value": ["going to the market today and", "are going to the market."], "description": "Must not assert the opposite meaning."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Critical negation test: dropping 'வதில்லை' reverses the meaning."
+  },
+  {
+    "id": "TEB-T2E-0005",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "அவன் என்னை ஒரு புதிய கார் வாங்க உதவினான்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the helping relationship: he helped me buy a new car.",
+    "references": [
+      "He helped me buy a new car.",
+      "He helped me to buy a new car.",
+      "He assisted me in buying a new car."
+    ],
+    "glossary": [],
+    "context": "Past event with a helper and an object.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["causative_help", "object_relationship"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["help", "Help", "assist", "Assist"], "description": "Helping action must appear."},
+      {"kind": "must_contain", "value": ["car", "Car"], "description": "Object 'car' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Ensure subject/object roles are not swapped (he helped me, not I helped him)."
+  },
+  {
+    "id": "TEB-T2E-0006",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "மாலை வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate as a polite evening greeting using the respectful 'you'.",
+    "references": [
+      "Good evening, how are you?",
+      "Good evening, how are you doing?",
+      "Good evening. How are you?"
+    ],
+    "glossary": [],
+    "context": "Polite evening greeting.",
+    "difficulty": "easy",
+    "register": "formal",
+    "phenomena": ["politeness", "question_form"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["good evening", "Good evening"], "description": "Evening greeting must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "நீங்கள் is honorific plural; 'you' is correct, avoid 'you all' unless context demands."
+  },
+  {
+    "id": "TEB-T2E-0007",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "இவ்வாறு பல சிக்கல்கள் இருந்தபோதிலும், அவர் வேலையை நேரத்தில் முடித்தார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the concessive relation (although/even though) and on-time completion.",
+    "references": [
+      "Although there were many complications, he completed the work on time.",
+      "Even though there were many complications, he finished the work on time.",
+      "Despite many complications, he completed the work on time."
+    ],
+    "glossary": [],
+    "context": "Complex sentence with a concessive clause.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["concessive_clause", "honorific_verb", "temporal_adverbial"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["on time", "in time", "on-time"], "description": "Timely completion must be preserved."},
+      {"kind": "must_contain", "value": ["although", "Although", "even though", "Even though", "despite", "Despite", "though", "Though"], "description": "Concessive marker must be present."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "முடித்தார் is honorific; translation may use neutral 'he' but must not downgrade to casual register."
+  },
+  {
+    "id": "TEB-T2E-0008",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "என் அண்ணன் சென்னையில் மருத்துவராக பணியாற்றுகிறார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the named entity 'Chennai' and the profession 'doctor'.",
+    "references": [
+      "My brother works as a doctor in Chennai.",
+      "My elder brother works as a doctor in Chennai.",
+      "My brother is a doctor in Chennai."
+    ],
+    "glossary": [
+      {"term": "சென்னை", "translation": "Chennai", "language": "ta"},
+      {"term": "மருத்துவர்", "translation": "doctor", "language": "ta"}
+    ],
+    "context": "Family and profession statement with a place name.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["named_entity", "profession"],
+    "critical_constraints": [
+      {"kind": "entity_preservation", "value": "Chennai", "description": "City name must be preserved exactly."},
+      {"kind": "must_contain", "value": ["doctor", "Doctor", "physician", "Physician"], "description": "Profession must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "அண்ணன் = elder brother; 'brother' is acceptable, 'elder brother' more precise."
+  },
+  {
+    "id": "TEB-T2E-0009",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "பள்ளி முடிந்த பிறகு நான் பூங்காவுக்குச் சென்றேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate preserving the temporal order: after school ended, I went to the park.",
+    "references": [
+      "After school ended, I went to the park.",
+      "I went to the park after school was over.",
+      "After school got over, I went to the park."
+    ],
+    "glossary": [],
+    "context": "Sequence-of-events narrative.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["temporal_ordering", "past_tense"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["after", "After"], "description": "Temporal ordering marker must appear."},
+      {"kind": "must_contain", "value": ["park", "Park"], "description": "Destination 'park' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Avoid reversing the order (went to the park, then school ended)."
+  },
+  {
+    "id": "TEB-T2E-0010",
+    "category": "translation_ta_to_en",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "இந்த காபி மிகவும் காடி கொண்டது; எனக்கு இன்னும் ஒரு கோப்பை வேணும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate both clauses, preserving the strong-coffee description and the request for another cup.",
+    "references": [
+      "This coffee is very strong; I want another cup.",
+      "This coffee is very strong; I would like one more cup.",
+      "This coffee is very strong, and I need another cup."
+    ],
+    "glossary": [],
+    "context": "Cafe conversation.",
+    "difficulty": "medium",
+    "register": "informal",
+    "phenomena": ["compound_sentence", "quantity_word"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["coffee", "Coffee"], "description": "'coffee' must appear."},
+      {"kind": "must_contain", "value": ["strong", "Strong"], "description": "'strong' must appear."},
+      {"kind": "must_contain", "value": ["another cup", "one more cup", "more cup", "another glass"], "description": "Request for one more cup must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "காடி = strong (of coffee/tea); do not translate as 'bitter' without evidence."
+  }
+]

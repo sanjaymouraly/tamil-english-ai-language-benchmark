@@ -1,0 +1,337 @@
+[
+  {
+    "id": "TEB-TER-0001",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "Please back up the database every night and store the backup on the server.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate using the standard glossary: database=தரவுத்தளம், backup=காப்பகப்படுத்தல், server=சேவையகம்.",
+    "references": [
+      "தரவுத்தளத்தை இரவு ஒவ்வொரு நாளும் காப்பகப்படுத்தி, காப்பகத்தை சேவையகத்தில் சேமிக்கவும்.",
+      "தரவுத்தளத்தை ஒவ்வொரு இரவும் காப்பகப்படுத்தி அதன் காப்பகத்தை சேவையகத்தில் வைக்கவும்.",
+      "இரவு ஒவ்வொரு நாளும் தரவுத்தளத்தைக் காப்பகப்படுத்தி சேவையகத்தில் சேமிக்கவும்."
+    ],
+    "glossary": [
+      {"term": "database", "translation": "தரவுத்தளம்", "language": "en"},
+      {"term": "backup", "translation": "காப்பகப்படுத்தல்", "language": "en"},
+      {"term": "server", "translation": "சேவையகம்", "language": "en"}
+    ],
+    "context": "IT operations instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "technical_vocabulary"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தரவுத்தளம்"], "description": "Glossary: database → தரவுத்தளம்."},
+      {"kind": "must_contain", "value": ["காப்பகப்படுத்த", "காப்பக சேமி", "காப்பகப்படுத்தல்"], "description": "Glossary: backup → காப்பகப்படுத்தல்."},
+      {"kind": "must_contain", "value": ["சேவையகம்"], "description": "Glossary: server → சேவையகம்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Terminology consistency is the primary scored dimension."
+  },
+  {
+    "id": "TEB-TER-0002",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "Update the password and enable login notifications for all users.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate using glossary: password=கடவுச்சொல், login=உள்நுழைவு, update=புதுப்பி, users=பயனர்கள்.",
+    "references": [
+      "கடவுச்சொல்லைப் புதுப்பி அனைத்துப் பயனர்களுக்கும் உள்நுழைவு அறிவிப்புகளை இயக்கவும்.",
+      "அனைத்து பயனர்களுக்கும் கடவுச்சொல்லை புதுப்பித்து உள்நுழைவு அறிவிப்பை செயல்படுத்தவும்.",
+      "கடவுச்சொல்லை மேம்படுத்தி அனைத்துப் பயனர்களுக்கும் உள்நுழைவு அறிவிப்புகளை வெளிப்படுத்தவும்."
+    ],
+    "glossary": [
+      {"term": "password", "translation": "கடவுச்சொல்", "language": "en"},
+      {"term": "login", "translation": "உள்நுழைவு", "language": "en"},
+      {"term": "update", "translation": "புதுப்பி", "language": "en"},
+      {"term": "users", "translation": "பயனர்கள்", "language": "en"}
+    ],
+    "context": "System administration instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "imperative"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["கடவுச்சொல்"], "description": "Glossary: password → கடவுச்சொல்."},
+      {"kind": "must_contain", "value": ["உள்நுழைவு"], "description": "Glossary: login → உள்நுழைவு."},
+      {"kind": "must_contain", "value": ["பயனர்"], "description": "Glossary: users → பயனர்கள்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Unapproved variants (கடவுச் சொல் with space) still acceptable; flag foreign borrowings."
+  },
+  {
+    "id": "TEB-TER-0003",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "ta->en",
+    "source_text": "தரவுத்தளத்தின் காப்பகத்தை சேவையகத்தில் அகற்றாதே.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate using reverse glossary: தரவுத்தளம்=database, காப்பகம்=backup, சேவையகம்=server; preserve negation.",
+    "references": [
+      "Do not remove the database backup from the server.",
+      "Do not delete the database backup on the server.",
+      "Never remove the database backup from the server."
+    ],
+    "glossary": [
+      {"term": "தரவுத்தளம்", "translation": "database", "language": "ta"},
+      {"term": "காப்பகம்", "translation": "backup", "language": "ta"},
+      {"term": "சேவையகம்", "translation": "server", "language": "ta"}
+    ],
+    "context": "IT safety instruction with negation.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "negation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["not", "Not", "never", "Never", "don't", "Don't"], "description": "Negation must be preserved."},
+      {"kind": "must_contain", "value": ["database", "Database"], "description": "Glossary: தரவுத்தளம் → database."},
+      {"kind": "must_contain", "value": ["server", "Server"], "description": "Glossary: சேவையகம் → server."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Negation + terminology both tested."
+  },
+  {
+    "id": "TEB-TER-0004",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "The firewall blocked the unauthorized request to the cloud server.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate using glossary: firewall=தீச்சுவர், cloud=கிளவுட், server=சேவையகம், unauthorized=அனுமதி இல்லாத.",
+    "references": [
+      "தீச்சுவர் கிளவுட் சேவையகத்திற்கான அனுமதி இல்லாத கோரிக்கையைத் தடை செய்தது.",
+      "தீச்சுவர் கிளவுட் சேவையகத்துக்கான அனுமதியற்ற கோரிக்கையை தடுத்தது.",
+      "கிளவுட் சேவையகத்திற்கான அனுமதி இல்லாத கோரிக்கை தீச்சுவரால் தடை செய்யப்பட்டது."
+    ],
+    "glossary": [
+      {"term": "firewall", "translation": "தீச்சுவர்", "language": "en"},
+      {"term": "cloud", "translation": "கிளவுட்", "language": "en"},
+      {"term": "server", "translation": "சேவையகம்", "language": "en"},
+      {"term": "unauthorized", "translation": "அனுமதி இல்லாத", "language": "en"}
+    ],
+    "context": "Security event description.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "security_vocabulary"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தீச்சுவர்"], "description": "Glossary: firewall → தீச்சுவர்."},
+      {"kind": "must_contain", "value": ["கிளவுட்"], "description": "Glossary: cloud → கிளவுட்."},
+      {"kind": "must_contain", "value": ["சேவையகம்"], "description": "Glossary: server → சேவையகம்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "தீச்சுவர் (coined Tamil term) preferred over English 'firewall'."
+  },
+  {
+    "id": "TEB-TER-0005",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "Install the software update and restart the application.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate with glossary: software update=மென்பொருள் புதுப்பிப்பு, application=செயலி, restart=மீண்டும் தொடங்கு.",
+    "references": [
+      "மென்பொருள் புதுப்பிப்பை நிறுவி செயலியை மீண்டும் தொடங்கவும்.",
+      "மென்பொருள் புதுப்பிப்பை நிறுவி செயலியை மீண்டும் காண்டு தொடங்கவும்.",
+      "மென்பொருள் புதுப்பிப்பை நிறுவி செயலியை மீண்டும் ஏற்றவும்."
+    ],
+    "glossary": [
+      {"term": "software update", "translation": "மென்பொருள் புதுப்பிப்பு", "language": "en"},
+      {"term": "application", "translation": "செயலி", "language": "en"},
+      {"term": "restart", "translation": "மீண்டும் தொடங்கு", "language": "en"}
+    ],
+    "context": "Software maintenance instruction.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["glossary_terms"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["மென்பொருள்"], "description": "Glossary: software → மென்பொருள்."},
+      {"kind": "must_contain", "value": ["செயலி"], "description": "Glossary: application → செயலி."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Consistency with TER-0001..0004 terminology expected."
+  },
+  {
+    "id": "TEB-TER-0006",
+    "category": "technical_terminology",
+    "task_type": "terminology_consistency_check",
+    "direction": "ta->en",
+    "source_text": "கடவுச்சொல்லை மறக்காத காரணத்தால் உள்நுழைவு தோல்வியடைந்தது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate using reverse glossary: கடவுச்சொல்=password, உள்நுழைவு=login; preserve causality.",
+    "references": [
+      "The login failed because the password was forgotten.",
+      "Login failed since the password was not remembered.",
+      "The login failed due to a forgotten password."
+    ],
+    "glossary": [
+      {"term": "கடவுச்சொல்", "translation": "password", "language": "ta"},
+      {"term": "உள்நுழைவு", "translation": "login", "language": "ta"}
+    ],
+    "context": "Authentication failure description.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "causality"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["password", "Password"], "description": "Glossary: கடவுச்சொல் → password."},
+      {"kind": "must_contain", "value": ["login", "Login", "sign-in", "sign in"], "description": "Glossary: உள்நுழைவு → login."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Reverse direction of TER-0002 glossary."
+  },
+  {
+    "id": "TEB-TER-0007",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "The browser cache is full; clear the cache and reload the webpage.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate with glossary: browser=உலாவி, cache=இடையக ஞாபகம், webpage=இணையப் பக்கம்.",
+    "references": [
+      "உலாவி இடையக ஞாபகம் நிரம்பியுள்ளது; இடையகத்தை அழி இணையப் பக்கத்தை மீண்டும் ஏற்றுக.",
+      "உலாவியின் இடையக ஞாபகம் முழுமையாக இருக்கிறது; இடையகத்தை காலியாக்கி இணையப் பக்கத்தை மீண்டும் பதிவெடுக்கவும்.",
+      "உலாவி இடையகம் நிரம்பியுள்ளது; அதை அழி இணையப் பக்கத்தை மீண்டும் திற."
+    ],
+    "glossary": [
+      {"term": "browser", "translation": "உலாவி", "language": "en"},
+      {"term": "cache", "translation": "இடையக ஞாபகம்", "language": "en"},
+      {"term": "webpage", "translation": "இணையப் பக்கம்", "language": "en"}
+    ],
+    "context": "Web troubleshooting instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "coined_terms"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["உலாவி"], "description": "Glossary: browser → உலாவி."},
+      {"kind": "must_contain", "value": ["இடையக"], "description": "Glossary: cache → இடையக ஞாபகம்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Coined Tamil terms preferred over bare English loanwords."
+  },
+  {
+    "id": "TEB-TER-0008",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "Save the spreadsheet and attach it to the email before sending.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate with glossary: spreadsheet=வரிசையட்டல், attach=இணை, email=மின்னஞ்சல்.",
+    "references": [
+      "வரிசையட்டலைச் சேமி அதை மின்னஞ்சலில் இணைத்து அனுப்புக.",
+      "மின்னஞ்சல் அனுப்பும் முன் வரிசையட்டலை சேமித்து இணைக்கவும்.",
+      "வரிசையட்டலை சேமித்து மின்னஞ்சலுடன் இணைத்து அனுப்பவும்."
+    ],
+    "glossary": [
+      {"term": "spreadsheet", "translation": "வரிசையட்டல்", "language": "en"},
+      {"term": "email", "translation": "மின்னஞ்சல்", "language": "en"},
+      {"term": "attach", "translation": "இணை", "language": "en"}
+    ],
+    "context": "Office workflow instruction.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "sequence"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வரிசையட்டல்"], "description": "Glossary: spreadsheet → வரிசையட்டல்."},
+      {"kind": "must_contain", "value": ["மின்னஞ்சல்"], "description": "Glossary: email → மின்னஞ்சல்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Order: save then attach then send."
+  },
+  {
+    "id": "TEB-TER-0009",
+    "category": "technical_terminology",
+    "task_type": "terminology_consistency_check",
+    "direction": "ta->en",
+    "source_text": "வரிசையட்டலில் உள்ள தரவுகளை வரிசையட்டல் வடிவில் ஏற்றுமதி செய்யவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate consistently: வரிசையட்டல்=spreadsheet (same term both occurrences), தரவுகள்=data, ஏற்றுமதி=export.",
+    "references": [
+      "Export the data in the spreadsheet in spreadsheet format.",
+      "Export the data in the spreadsheet to spreadsheet format.",
+      "Export the spreadsheet data as a spreadsheet file."
+    ],
+    "glossary": [
+      {"term": "வரிசையட்டல்", "translation": "spreadsheet", "language": "ta"},
+      {"term": "ஏற்றுமதி", "translation": "export", "language": "ta"},
+      {"term": "தரவுகள்", "translation": "data", "language": "ta"}
+    ],
+    "context": "Repetitive terminology test (same term twice).",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "repetition_consistency"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["spreadsheet", "Spreadsheet"], "description": "Glossary: வரிசையட்டல் → spreadsheet."},
+      {"kind": "must_contain", "value": ["export", "Export"], "description": "Glossary: ஏற்றுமதி → export."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Term repeats twice; inconsistent translation is a terminology error."
+  },
+  {
+    "id": "TEB-TER-0010",
+    "category": "technical_terminology",
+    "task_type": "translation_with_glossary",
+    "direction": "en->ta",
+    "source_text": "Run the compiler and fix the errors shown in the console.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate with glossary: compiler=தொகுப்பி, errors=பிழைகள், console=கன்சோல்/குறிப்பு விண்முறை.",
+    "references": [
+      "தொகுப்பியை இயக்கி கன்சோலில் காட்டப்பட்ட பிழைகளைச் சரிப்படுத்தவும்.",
+      "தொகுப்பியை இயக்கி குறிப்பு விண்முறையில் காணப்படும் பிழைகளை சரி செய்யவும்.",
+      "தொகுப்பி இயக்கப்பட்டு கன்சோலில் உள்ள பிழைகள் சரிக்கப்படவும்."
+    ],
+    "glossary": [
+      {"term": "compiler", "translation": "தொகுப்பி", "language": "en"},
+      {"term": "errors", "translation": "பிழைகள்", "language": "en"},
+      {"term": "console", "translation": "கன்சோல்", "language": "en"}
+    ],
+    "context": "Programming workflow instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["glossary_terms", "programming_vocabulary"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தொகுப்பி"], "description": "Glossary: compiler → தொகுப்பி."},
+      {"kind": "must_contain", "value": ["பிழை"], "description": "Glossary: errors → பிழைகள்."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Console may stay as loanword கன்சோல்; acceptable."
+  }
+]

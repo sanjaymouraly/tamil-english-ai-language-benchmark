@@ -1,0 +1,75 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / build artifacts
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.venv
+
+# Data generated at runtime
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Local secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Generated reports: ignored by default, except the small curated demo artifacts
+# that the README and docs/benchmark-analysis.md reference as evidence of a real
+# run. The HTML report is ~5 MB because it inlines Plotly.js for offline use, so
+# it is regenerated on demand rather than committed.
+reports/*
+!reports/.gitkeep
+!reports/demo_report.markdown
+!reports/demo_report.json
+!reports/demo_results.csv
+
+# Model artifacts / caches
+*.bin
+*.safetensors
+*.gguf
+.cache/
+.huggingface/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+logs/
+
+# Local caches and generated files
+node_modules/
+*.sqlite3
+coverage/
+.next/
+CHANGELOG.md

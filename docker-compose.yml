@@ -1,0 +1,30 @@
+services:
+  api:
+    build: .
+    command: ["api"]
+    ports:
+      - "8000:8000"
+    environment:
+      - TEB_DATA_DIR=/app/data
+    volumes:
+      - teb-data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  ui:
+    build: .
+    command: ["ui"]
+    ports:
+      - "8501:8501"
+    environment:
+      - TEB_DATA_DIR=/app/data
+    volumes:
+      - teb-data:/app/data
+    depends_on:
+      - api
+
+volumes:
+  teb-data:

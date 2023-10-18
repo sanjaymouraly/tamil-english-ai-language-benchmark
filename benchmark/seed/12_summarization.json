@@ -1,0 +1,304 @@
+[
+  {
+    "id": "TEB-SUM-0001",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "ta->ta",
+    "source_text": "புதுச்சேரி மாநகரத்தில் கண்ணீர் ஓட்டம் காரணமாக பல சாலைகள் நீரில் மூழ்கின. பள்ளி மாணவர்கள் வீடுக்குச் செல்ல முடியவில்லை. ஆட்சியர்கள் வெளியேற்றிய எச்சரிக்கையின்படி மக்கள் வீடுகளில் தங்க வேண்டும் என்று கூறினர்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Summarize in Tamil: heavy rain flooded roads in Puducherry, students stayed home, officials advised staying indoors.",
+    "references": [
+      "புதுச்சேரியில் கண்ணீர் ஓட்டத்தால் சாலைகள் மூழ்கின; மாணவர்கள் வீட்டில் தங்கினர்; ஆட்சியர்கள் வீடுகளில் தங்க வழங்கினர்.",
+      "புதுச்சேரியில் மழைத்துவள்ளத்தால் சாலைகள் நீரில் மூழ்கி பள்ளிகள் மூடப்பட்டன; மக்கள் வீட்டிலேயே தங்கப் பருக்கப்பட்டனர்.",
+      "கண்ணீர் ஓட்டத்தில் புதுச்சேரி சாலைகள் மூழ்கின; மாணவர்கள் பள்ளிக்கு செல்ல முடியவில்லை; வீட்டில் தங்குமாறு ஆட்சியர்கள் எச்சரித்தனர்."
+    ],
+    "glossary": [],
+    "context": "News paragraph summarization.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["summarization", "fact_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["புதுச்சேரி"], "description": "Location must be preserved."},
+      {"kind": "must_contain", "value": ["மூழ்க", "நீரில்", "வெள்ளம்", "கட்டுப்பாடு"], "description": "Flooding must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional weather report.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Key facts: place, flooding, students, advisory."
+  },
+  {
+    "id": "TEB-SUM-0002",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "en->ta",
+    "source_text": "The company launched a new Tamil language learning app on Monday. The app offers offline lessons, speech practice, and a dictionary. More than 50,000 users downloaded it in the first week.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Summarize into Tamil preserving: app launch Monday, features (offline lessons, speech practice, dictionary), 50,000 downloads in first week.",
+    "references": [
+      "நிறுவனம் திங்கள்கிழமை புதிய தமிழ் கற்றுக்கொள்ளும் செயலியை வெளியிட்டது. இணையம் இல்லாமல் பாடங்கள், பேச்சு பயிற்சி, அகராதி ஆகியவை உள்ளன. முதல் வாரத்தில் 50,000 பயனர்கள் பதிவிறக்கினர்.",
+      "புதிய தமிழ் செயலி திங்கள்கிழமை வெளியிடப்பட்டது; ஆஃப் லைன் பாடங்கள், பேச்சு பயிற்சி, அகராதி இவை. 50,000 பயனர்கள் முதல் வாரத்தில் பதிவிறக்கினர்."
+    ],
+    "glossary": [
+      {"term": "offline lessons", "translation": "ஆஃப் லைன் பாடங்கள்", "language": "en"},
+      {"term": "dictionary", "translation": "அகராதி", "language": "en"}
+    ],
+    "context": "Product launch summary.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["summarization", "numeric_preservation", "cross_language"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "50,000", "description": "User count must be preserved."},
+      {"kind": "must_contain", "value": ["அகராதி"], "description": "Dictionary feature must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional product data.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Numbers must survive the Tamil rendering."
+  },
+  {
+    "id": "TEB-SUM-0003",
+    "category": "summarization_rewriting",
+    "task_type": "rewriting",
+    "direction": "ta->ta",
+    "source_text": "அவன் காலை 6 மணிக்கு எழுந்தார். பின்னர் பால் குடித்து ஓட்டம் சென்றார். திரும்பி வந்து காய்கறி சாப்பிட்டார். படிக்கத் தொடங்கினார்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Rewrite as a single concise Tamil sentence preserving all four events and the 6 AM time.",
+    "references": [
+      "காலை 6 மணிக்கு எழுந்து பால் குடித்து ஓட்டம் சென்று, காய்கறி சாப்பிட்டு படிக்கத் தொடங்கினார்.",
+      "அவன் 6 மணிக்கு எழுந்து ஓட்டம் சென்று காய்கறி சாப்பிட்டு படித்தார்.",
+      "காலை 6 மணிக்கு எழுந்து ஓட்டமும் காய்கறியும் பாலும் பின்படிப்பும் செய்தார்."
+    ],
+    "glossary": [],
+    "context": "Rewriting task: four sentences to one.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["sentence_fusion", "event_chain"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["6"], "description": "Time 6 must be preserved."},
+      {"kind": "must_contain", "value": ["ஓட்டம்", "காய்கறி", "பால்", "படிக்க", "படித்த"], "description": "All four activities should appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "All four events must be retained; omission is scored."
+  },
+  {
+    "id": "TEB-SUM-0004",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "ta->en",
+    "source_text": "இந்திய அரசு விவசாய உதவி தொகையை அதிகரித்தது. விவசாயர்கள் இதனால் நன்றியடைந்தனர். ஆனால் சில ஊர்களில் வழங்கல் சிக்கல்கள் உள்ளன.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Summarize into English: government raised farm aid, farmers welcomed it, but some villages face delivery issues.",
+    "references": [
+      "The government increased farm aid, which farmers welcomed, though some villages face delivery problems.",
+      "Farm aid was raised; farmers are happy, but delivery issues persist in some villages.",
+      "The Indian government raised agricultural assistance; farmers welcomed it while some areas reported delivery issues."
+    ],
+    "glossary": [
+      {"term": "விவசாய உதவி", "translation": "farm aid", "language": "ta"}
+    ],
+    "context": "Policy news summary.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["summarization", "contrast_clause"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["farm", "agriculture", "agricultural", "Farm", "Agriculture"], "description": "Farm aid topic must appear."},
+      {"kind": "must_contain", "value": ["deliver", "Deliver", "delivery", "Delivery"], "description": "Delivery problems must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional policy news.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Concessive clause (but...) must not be dropped."
+  },
+  {
+    "id": "TEB-SUM-0005",
+    "category": "summarization_rewriting",
+    "task_type": "rewriting",
+    "direction": "ta->ta",
+    "source_text": "நல்ல மொழியாக இருக்கும் படி எழுதுக. பள்ளி வாடிக்கையாளர்களுக்கு விருந்து வழங்குகிறோம்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Rewrite politely/clearly in Tamil: we offer meals to school students.",
+    "references": [
+      "பள்ளி மாணவர்களுக்கு விருந்து வழங்குகிறோம்.",
+      "நாங்கள் பள்ளி வாடிக்கையாளர்களுக்கு உணவு வழங்குகிறோம்.",
+      "பள்ளி மாணவர்களுக்கு விருந்து செய்துகொடுக்கிறோம்."
+    ],
+    "glossary": [],
+    "context": "Rewriting for clarity; note the source uses 'students' oddly — keep meaning of school meals.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["clarity_rewrite"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["பள்ளி"], "description": "School must appear."},
+      {"kind": "must_contain", "value": ["விருந்து", "உணவு", "சாப்பிட"], "description": "Meal must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Minor wording cleanup; meaning stable."
+  },
+  {
+    "id": "TEB-SUM-0006",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "ta->ta",
+    "source_text": "மாணவன் தேர்வுக்கு தயாராக தொடர்ந்து படித்தான். அவன் கவனமாக குறிப்புகள் எழுதினான். முன்னாள் கேள்விகளைப் பயிற்சி செய்தான். பருக்கேற்ற படிக்கவில்லை. மிக நன்றாக மதிப்பெண் பெற்றான்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Summarize: student prepared continuously, wrote notes, practiced past questions, did not cram, scored well.",
+    "references": [
+      "தொடர்ச்சியாகப் படித்து, குறிப்புகள் எழுதி, முன்னாள் கேள்விகளைப் பயிற்சி செய்த மாணவன் நல்ல மதிப்பெண் பெற்றான்.",
+      "மாணவன் தொடர்ந்து படித்து குறிப்புகள் எழுதி முன்னாள் கேள்விகளைப் பயிற்சி செய்து நன்றாக மதிப்பெண் பெற்றான்.",
+      "பருக்கேற்றாமல் தயாரான மாணவன் உயர் மதிப்பெண் பெற்றான்."
+    ],
+    "glossary": [],
+    "context": "Study-method summary.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["summarization", "negation_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["மதிப்பெண்", "மதிப்பு", "மதிப்பெண் பெற"], "description": "Score must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Negation 'did not cram' is a key differentiator."
+  },
+  {
+    "id": "TEB-SUM-0007",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "en->en",
+    "source_text": "Our team reviewed 200 Tamil sentences. We found that 40 sentences had translation errors. Most errors were about numbers. We will fix the dataset and release version 1.1 next month.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "en",
+    "expected_behavior": "Summarize in English preserving counts: 200 reviewed, 40 errors, mostly numbers, v1.1 next month.",
+    "references": [
+      "A review of 200 Tamil sentences found 40 translation errors, mostly about numbers; the dataset will be fixed and released as version 1.1 next month.",
+      "Of 200 Tamil sentences reviewed, 40 had errors (mostly numeric); v1.1 releases next month.",
+      "Team found 40 errors in 200 Tamil sentences, mainly numbers; dataset fix and v1.1 release next month."
+    ],
+    "glossary": [
+      {"term": "dataset", "translation": "dataset", "language": "en"}
+    ],
+    "context": "Internal QA summary.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["summarization", "numeric_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["200"], "description": "200 sentences must appear."},
+      {"kind": "must_contain", "value": ["40"], "description": "40 errors must appear."},
+      {"kind": "must_contain", "value": ["1.1"], "description": "Version 1.1 must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional QA report.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "All three numbers are critical constraints."
+  },
+  {
+    "id": "TEB-SUM-0008",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "ta->en",
+    "source_text": "ஊர் நூலகம் இரவு 5 மணிக்கு முடிகிறது. வாழ்நாள் நூல்கள் மட்டுமே வெளியே அனுப்பப்படுகின்றன. புதிய நூல்கள் வாரத்திற்கு இரண்டு முறை வழங்கப்படுகின்றன.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Summarize into English: library closes 5 PM, only week-old books are issued, new books arrive twice a week.",
+    "references": [
+      "The village library closes at 5 PM; only week-old books are issued outside; new books arrive twice a week.",
+      "Library closes at 5 in the evening; only books a week old are lent out; new titles arrive twice weekly.",
+      "The library shuts at 5 PM, issues only week-old books, and receives new books twice a week."
+    ],
+    "glossary": [
+      {"term": "ஊர் நூலகம்", "translation": "village library", "language": "ta"}
+    ],
+    "context": "Library rules summary.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["summarization", "time_expression", "frequency"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["5 PM", "5 pm", "5 p.m.", "5:00"], "description": "Closing time must appear."},
+      {"kind": "must_contain", "value": ["twice a week", "twice weekly", "two times a week"], "description": "Frequency must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional library rules.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Two numeric constraints and one frequency constraint."
+  },
+  {
+    "id": "TEB-SUM-0009",
+    "category": "summarization_rewriting",
+    "task_type": "rewriting",
+    "direction": "ta->en",
+    "source_text": "அவள் சென்னையில் வசீரா நூல் படித்தாள். அப்புறம் அவள் புத்தகங்கள் எழுதத் தொடங்கினாள். அவள் எழுதிய கதைகள் பலருக்கு பிடித்தன.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Rewrite concisely in English: she studied at Washerpet (Chennai), then wrote books; her stories were liked by many.",
+    "references": [
+      "She studied at Washerpet in Chennai, then began writing books; her stories were liked by many.",
+      "She studied in Chennai and wrote books; many liked her stories.",
+      "She studied in Washerpet, Chennai, and wrote popular stories."
+    ],
+    "glossary": [
+      {"term": "வசீரா", "translation": "Washerpet", "language": "ta"}
+    ],
+    "context": "Biographical rewrite; place name must be preserved.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["rewriting", "place_entity"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["Chennai", "chennai", "Washerpet", "washerpet"], "description": "Place must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional person.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Do not 'translate' Washerpet into a generic district."
+  },
+  {
+    "id": "TEB-SUM-0010",
+    "category": "summarization_rewriting",
+    "task_type": "summarization",
+    "direction": "ta->ta",
+    "source_text": "நிகழ்வு மாரடைபம் மாதம் 15 ஆம் தேதி காலை 10 மணிக்கு நடக்கும். பதிவு வழங்கப்பட்ட முதல் 100 பங்கேற்பாளர்களுக்கு இலவசம். இடம் மாநகர் அரங்கம்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Summarize in Tamil preserving date (15th), time (10 AM), free for first 100 registrants, venue City Hall.",
+    "references": [
+      "மாரடைபம் மாதம் 15 ஆம் தேதி காலை 10 மணிக்கு மாநகர் அரங்கத்தில் நடக்கும் நிகழ்வில் முதல் 100 பதிவு பெற்றோருக்கு இலவசம்.",
+      "15 ஆம் தேதி காலை 10 மணிக்கு மாநகர் அரங்கத்தில் நிகழ்வு; முதல் 100 பங்கேற்பாளர்களுக்கு இலவசம்.",
+      "மாரடைபம் மாதம் 15 அன்று காலை 10 மணிக்கு மாநகர் அரங்கம்; முதல் 100 பேருக்கு இலவச பதிவு."
+    ],
+    "glossary": [
+      {"term": "மாநகர் அரங்கம்", "translation": "City Hall", "language": "ta"}
+    ],
+    "context": "Event announcement summary.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["summarization", "date_time_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["15"], "description": "Date 15 must be preserved."},
+      {"kind": "must_contain", "value": ["100"], "description": "100 registrants must be preserved."},
+      {"kind": "must_contain", "value": ["10"], "description": "Time 10 AM must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional event.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Three numeric constraints."
+  }
+]

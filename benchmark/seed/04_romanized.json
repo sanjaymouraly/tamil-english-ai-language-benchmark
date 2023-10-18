@@ -1,0 +1,283 @@
+[
+  {
+    "id": "TEB-ROM-0001",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "naan pazham saapduven",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate into Tamil script (நான் பழம் சாப்பிடுவேன்) and convey the meaning 'I will eat a fruit'.",
+    "references": [
+      "நான் பழம் சாப்பிடுவேன்.",
+      "நான் ஒரு பழம் சாப்பிடுவேன்.",
+      "I will eat a fruit. (நான் பழம் சாப்பிடுவேன்.)"
+    ],
+    "glossary": [],
+    "context": "Romanized Tamil (written Tamil in Latin letters).",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["romanization", "future_tense"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["பழம்"], "description": "Tamil script for 'fruit' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Accept Tamil script output, English gloss, or both."
+  },
+  {
+    "id": "TEB-ROM-0002",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "ithu enna vilai?",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as இது என்ன விலை? and convey 'What is the price?'",
+    "references": [
+      "இது என்ன விலை?",
+      "இதன் விலை என்ன?",
+      "What is the price? (இது என்ன விலை?)"
+    ],
+    "glossary": [],
+    "context": "Shopping question in romanized Tamil.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["romanization", "question"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["விலை"], "description": "Tamil script for 'price' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Common spelling variants: 'enna', 'enaa'."
+  },
+  {
+    "id": "TEB-ROM-0003",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "nala irukke",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as நல்லா இருக்கே and convey 'I am fine'.",
+    "references": [
+      "நல்லா இருக்கே.",
+      "நல்லா இருக்கேன்.",
+      "I am fine. (நல்லா இருக்கே.)"
+    ],
+    "glossary": [],
+    "context": "How-are-you reply in romanized Tamil.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["romanization", "colloquial"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["நல்லா", "நல்ல", "நல்லா இருக்கே"], "description": "Tamil script for 'fine' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Informal register; 'nala' is colloquial for 'nallathaa'."
+  },
+  {
+    "id": "TEB-ROM-0004",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "romba nandri",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as ரொம்ப நன்றி and convey 'thank you very much'.",
+    "references": [
+      "ரொம்ப நன்றி.",
+      "ரொம்ப நன்றி கூறுகிறேன்.",
+      "Thank you very much. (ரொம்ப நன்றி.)"
+    ],
+    "glossary": [],
+    "context": "Gratitude expression in romanized Tamil.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["romanization", "gratitude"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["நன்றி"], "description": "Tamil script for 'thanks' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Common romanization: 'romba' or 'rompa'."
+  },
+  {
+    "id": "TEB-ROM-0005",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "veettukku poo",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as வீட்டுக்கு போ and convey 'go home'.",
+    "references": [
+      "வீட்டுக்கு போ.",
+      "வீட்டுக்குப் போ.",
+      "Go home. (வீட்டுக்கு போ.)"
+    ],
+    "glossary": [],
+    "context": "Casual instruction in romanized Tamil.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["romanization", "imperative"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வீட்டுக்கு", "வீட்டுக"], "description": "Tamil script for 'home' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Imperative 'poo' (go)."
+  },
+  {
+    "id": "TEB-ROM-0006",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "coffee kudunga",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as காஃபி குடுங்க and convey 'please give (me) coffee'.",
+    "references": [
+      "காஃபி குடுங்க.",
+      "காபி குடுங்க.",
+      "Please give me coffee. (காஃபி குடுங்க.)"
+    ],
+    "glossary": [],
+    "context": "Cafe request in romanized Tamil.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["romanization", "polite_request"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["காஃபி", "காபி"], "description": "Tamil script for 'coffee' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "'kudunga' is a polite request form."
+  },
+  {
+    "id": "TEB-ROM-0007",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "eppadi irukke",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as எப்படி இருக்கே and convey 'How are you?'.",
+    "references": [
+      "எப்படி இருக்கே?",
+      "எப்படி இருக்கீங்க?",
+      "How are you? (எப்படி இருக்கே?)"
+    ],
+    "glossary": [],
+    "context": "Greeting in romanized Tamil.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["romanization", "greeting"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["எப்படி"], "description": "Tamil script for 'how' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Spelling variants 'eppadi'/'eppaadi' both valid."
+  },
+  {
+    "id": "TEB-ROM-0008",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "padikku podu",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as படிக்குப் போ and convey 'go study'.",
+    "references": [
+      "படிக்குப் போ.",
+      "படிக்க போ.",
+      "Go study. (படிக்குப் போ.)"
+    ],
+    "glossary": [],
+    "context": "Parent advising a child.",
+    "difficulty": "easy",
+    "register": "informal",
+    "phenomena": ["romanization", "imperative"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["படிக்க", "படிக்கு"], "description": "Tamil script for 'study' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "'podu' is casual imperative 'go'."
+  },
+  {
+    "id": "TEB-ROM-0009",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "thamizh mozhi romba azhagu",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as தமிழ் மொழி ரொம்ப அழகு and convey 'The Tamil language is very beautiful'.",
+    "references": [
+      "தமிழ் மொழி ரொம்ப அழகு.",
+      "தமிழ் மொழி மிகவும் அழகானது.",
+      "The Tamil language is very beautiful. (தமிழ் மொழி ரொம்ப அழகு.)"
+    ],
+    "glossary": [],
+    "context": "Expressing admiration for Tamil.",
+    "difficulty": "medium",
+    "register": "informal",
+    "phenomena": ["romanization", "adjective"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தமிழ்"], "description": "Tamil script for 'Tamil' must appear."},
+      {"kind": "must_contain", "value": ["மொழி"], "description": "Tamil script for 'language' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "'thamizh' and 'mozhi' are standard romanizations."
+  },
+  {
+    "id": "TEB-ROM-0010",
+    "category": "romanized_transliteration",
+    "task_type": "transliteration_and_translation",
+    "direction": "roman-ta->ta+en",
+    "source_text": "naan veetu ponaan",
+    "source_script": "latin",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Transliterate as நான் வீட்டுப் போனான் and convey 'I went home'.",
+    "references": [
+      "நான் வீட்டுப் போனான்.",
+      "நான் வீட்டுக்குப் போனேன்.",
+      "I went home. (நான் வீட்டுப் போனான்.)"
+    ],
+    "glossary": [],
+    "context": "Past-action statement in romanized Tamil.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["romanization", "past_tense"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வீட்டுப் போன", "வீட்டுக்குப் போன", "வீட்டுக்கு போன"], "description": "Tamil script for 'went home' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Ponaan (honorific past) vs ponaen (neutral past) both acceptable."
+  }
+]

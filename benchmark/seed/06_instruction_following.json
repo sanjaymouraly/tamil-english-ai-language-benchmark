@@ -1,0 +1,287 @@
+[
+  {
+    "id": "TEB-INS-0001",
+    "category": "instruction_following",
+    "task_type": "constrained_generation",
+    "direction": "ta->ta",
+    "source_text": "கீழே குறிப்பிட்ட விஷயத்தை ஐந்து வரிகளில் சுருக்கமாக எழுதுக.\n\nதமிழ் மொழி இந்தியாவின் மிகப் பழமையான மொழிகளில் ஒன்றாகும். இது தமிழ்நாடு, புதுச்சேரி, இலங்கை, சிங்கப்பூர் ஆகிய நாடுகளில் பேசப்படுகிறது. தமிழ் மொழியின் இலக்கியம் மிகவும் சம௃த்தமாகவும் பழமையாகவும் உள்ளது.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Summarize the paragraph in Tamil in at most five lines.",
+    "references": [
+      "தமிழ் மொழி இந்தியாவின் மிகப் பழமையான மொழிகளில் ஒன்று. தமிழ்நாடு, புதுச்சேரி, இலங்கை, சிங்கப்பூர் ஆகியவற்றில் பேசப்படுகிறது. அதன் இலக்கியம் சம௃த்தமானது.",
+      "தமிழ் ஒரு பழமையான மொழி. பல நாடுகளில் பேசப்படுகிறது. இலக்கியம் சம௃த்தமானது."
+    ],
+    "glossary": [],
+    "context": "Instruction: max five lines, concise summary.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["length_constraint", "summarization"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தமிழ்"], "description": "Topic word Tamil must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Line-count constraint checked deterministically (<=5 non-empty lines)."
+  },
+  {
+    "id": "TEB-INS-0002",
+    "category": "instruction_following",
+    "task_type": "constrained_generation",
+    "direction": "ta->ta",
+    "source_text": "பட்டியல் வடிவில் பதில் தாருங்கள். கேள்வி: தமிழ்நாட்டின் முக்கிய நகரங்கள் யாவை?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Answer in a list format with major Tamil Nadu cities.",
+    "references": [
+      "1. சென்னை\n2. கோயம்பத்தூர்\n3. மதுரை\n4. சேலம்\n5. திருச்சிராப்பள்ளி",
+      "- சென்னை\n- கோயம்பத்தூர்\n- மதுரை\n- திருச்சிராப்பள்ளி\n- சேலம்"
+    ],
+    "glossary": [
+      {"term": "சென்னை", "translation": "Chennai", "language": "ta"}
+    ],
+    "context": "List-format instruction.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["output_structure", "list_format"],
+    "critical_constraints": [
+      {"kind": "regex", "value": "(?m)^\\s*([0-9]+[.):]|[-•*]|\\d+\\))", "description": "Response must contain a list marker."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Deterministic structure check: list markers present."
+  },
+  {
+    "id": "TEB-INS-0003",
+    "category": "instruction_following",
+    "task_type": "constrained_generation",
+    "direction": "ta->ta",
+    "source_text": "பதிலை தமிழில் மட்டும் எழுதுக. What is the capital of Tamil Nadu?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Answer only in Tamil: Chennai is the capital of Tamil Nadu.",
+    "references": [
+      "தமிழ்நாட்டின் தலைநகர் சென்னை ஆகும்.",
+      "சென்னை தமிழ்நாட்டின் தலைநகர்.",
+      "தமிழ்நாட்டின் தலைநகர் சென்னை."
+    ],
+    "glossary": [
+      {"term": "தலைநகர்", "translation": "capital", "language": "ta"}
+    ],
+    "context": "Language-restriction instruction.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["language_restriction", "script_constraint"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["சென்னை"], "description": "Chennai must appear."},
+      {"kind": "must_contain", "value": ["தமிழ்நாடு"], "description": "Tamil Nadu must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "English-heavy answers violate the Tamil-only constraint."
+  },
+  {
+    "id": "TEB-INS-0004",
+    "category": "instruction_following",
+    "task_type": "constrained_generation",
+    "direction": "ta->ta",
+    "source_text": "ஒவ்வொரு வாக்கியத்திற்கும் பிறகு ஒரு எண் சேர்த்து எழுதுக. தமிழ் மொழி அழகான மொழி.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Rewrite the sentence with a number after each sentence (numbering).",
+    "references": [
+      "1. தமிழ் மொழி அழகான மொழி. 2.",
+      "1. தமிழ் மொழி அழகான மொழி என்பது உண்மை. 2.",
+      "1. தமிழ் மொழி அழகான மொழி.\n2."
+    ],
+    "glossary": [],
+    "context": "Numbering instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["numbering_constraint"],
+    "critical_constraints": [
+      {"kind": "regex", "value": "1\\.", "description": "Numbering marker '1.' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Structural constraint test."
+  },
+  {
+    "id": "TEB-INS-0005",
+    "category": "instruction_following",
+    "task_type": "explanation",
+    "direction": "ta->ta",
+    "source_text": "இந்தக் கவிதையின் பொருளை விளக்குக.\n\nகாற்றில் பறக்கும் கவிதைகள்\nமண்ணின் மீது விழுந்தால்\nஅவை எல்லாம் மாற்றம் பெறும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Explain the meaning of the short poem in Tamil.",
+    "references": [
+      "காற்றில் பறக்கும் கவிதைகள் மண்ணில் விழுந்தால் அவை மாற்றமடையும் என்ற பொருள் கொண்ட கவிதை.",
+      "இக்கவிதையின் பொருள்: காற்றில் திகழ்ந்து இருப்பவை நிலத்தில் விழும்போது மாற்றம் அடையும்.",
+      "கவிதையின் பொருள் விளக்கம்: வாழ்வின் மாற்றம்."
+    ],
+    "glossary": [],
+    "context": "Literary explanation task.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["poetic_interpretation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["மாற்றம்"], "description": "Key concept 'change' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Open-ended; graded on meaning capture."
+  },
+  {
+    "id": "TEB-INS-0006",
+    "category": "instruction_following",
+    "task_type": "translation",
+    "direction": "ta->en",
+    "source_text": "ஆங்கிலத்தில் மொழிபெயர்க்குக. நான் இன்று மிக வேலை செய்தேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate to English as instructed: 'I worked very hard today.'",
+    "references": [
+      "I worked very hard today.",
+      "I did a lot of work today.",
+      "Today I worked very hard."
+    ],
+    "glossary": [],
+    "context": "Explicit target-language instruction.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["language_instruction", "intensity"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["work", "Work", "worked", "Worked"], "description": "Work must be mentioned."},
+      {"kind": "must_contain", "value": ["today", "Today"], "description": "'today' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Tests whether the model obeys the 'translate to English' instruction."
+  },
+  {
+    "id": "TEB-INS-0007",
+    "category": "instruction_following",
+    "task_type": "constrained_generation",
+    "direction": "ta->ta",
+    "source_text": "சொல் வரிசை மாற்றி எழுதுக: பள்ளி சென்று கற்றேன்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Rewrite with changed word order while keeping meaning.",
+    "references": [
+      "கற்றேன் பள்ளி சென்று.",
+      "பள்ளியில் சென்று கற்றேன்.",
+      "சென்று பள்ளியில் கற்றேன்."
+    ],
+    "glossary": [],
+    "context": "Word-order manipulation instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["word_order_variation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["பள்ளி"], "description": "'school' must appear."},
+      {"kind": "must_contain", "value": ["கற்றேன்", "கற்று"], "description": "'learned' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Meaning must be preserved under reordering."
+  },
+  {
+    "id": "TEB-INS-0008",
+    "category": "instruction_following",
+    "task_type": "explanation",
+    "direction": "ta->ta",
+    "source_text": "விளக்கத்துடன் பதில் தாருங்கள். தமிழில் 'காய்' என்றால் என்ன?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Explain with meaning: 'காய்' can mean raw/unripe or a wound, depending on context.",
+    "references": [
+      "'காய்' என்றால் பழுதலான (சாப்பிட வயல்லாத) என்பதும், காயம் என்பதும் ஆகும். எடுத்துக்காட்டு: காய் பழம், காய் பெற்ற கை.",
+      "'காய்' என்பது இரண்டு பொருள் கொண்டது: (1) சாப்பிடக்கூடிய நிலையிலாத பழம், (2) தோலில் ஏற்பட்ட காயம்.",
+      "காய் என்ற சொல் சூழலின் படி பழுதலானதையோ அல்லது காயத்தையோ குறிக்கும்."
+    ],
+    "glossary": [],
+    "context": "Explain-with-meaning instruction on an ambiguous word.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["polysemy", "explanation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["காய்"], "description": "The word itself must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Must mention at least one sense; both senses preferred."
+  },
+  {
+    "id": "TEB-INS-0009",
+    "category": "instruction_following",
+    "task_type": "constrained_generation",
+    "direction": "ta->ta",
+    "source_text": "ஒரு வரி எழுதுக. தமிழ் பற்றி ஒரு வாக்கியம்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Write exactly one line (one sentence) about Tamil.",
+    "references": [
+      "தமிழ் ஒரு அழகான மொழி.",
+      "தமிழ் மொழி உலகம் முழுவதும் பேசப்படுகிறது.",
+      "தமிழ் மிகப் பழமையான மொழி."
+    ],
+    "glossary": [],
+    "context": "One-line constraint.",
+    "difficulty": "easy",
+    "register": "neutral",
+    "phenomena": ["length_constraint"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தமிழ்"], "description": "Must mention Tamil."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Single-line constraint is deterministically checkable."
+  },
+  {
+    "id": "TEB-INS-0010",
+    "category": "instruction_following",
+    "task_type": "question_generation",
+    "direction": "ta->ta",
+    "source_text": "கேள்வியை மாற்றி கேட்குங்கள். நீங்கள் எப்போது வருகிறீர்கள்?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Rephrase the question into a different but equivalent Tamil question.",
+    "references": [
+      "நீங்கள் எந்த நேரத்தில் வருகிறீர்கள்?",
+      "எப்போது வருவீர்கள்?",
+      "நீங்கள் வர எப்போது நினைக்கிறீர்கள்?"
+    ],
+    "glossary": [],
+    "context": "Paraphrase-as-question instruction.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["paraphrase", "question_form"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வர", "வருக", "வருவ"], "description": "Coming/arriving must be mentioned."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Graded on meaning preservation and interrogative form."
+  }
+]

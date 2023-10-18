@@ -1,0 +1,317 @@
+[
+  {
+    "id": "TEB-BEM-0001",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "en->ta",
+    "source_text": "Subject: Project deadline change\nDear Team, due to client requirements, the project deadline has been moved to next Monday. Please update your plans accordingly.\nRegards, Manager",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Produce a formal Tamil business email preserving subject, deadline change to next Monday, and sign-off.",
+    "references": [
+      "தலைப்பு: திட்ட காலக்கட்டம் மாற்றம்\nஅன்பே குழு, வாடிக்கையாளர் தேவைகளால் திட்ட காலக்கட்டம் அடுத்த திங்கள் கிழமைக்கு மாற்றப்பட்டது. உங்கள் திட்டங்களை அதற்கேற்ப புதுப்பிக்கவும்.\nவணக்கம், மேலாண்மை",
+      "தலைப்பு: திட்டத்தின் காலக்கட்டம் மாற்றப்பட்டது\nகுழு உறுப்பினர்களே, வாடிக்கையாளர் தேவைகள் காரணமாக திட்டத்தின் காலக்கட்டம் அடுத்த திங்கள் கிழமைக்கு மாற்றப்பட்டது. தயவுசெய்து உங்கள் திட்டங்களை மாற்றவும்.\nநன்றி, மேலாளர்"
+    ],
+    "glossary": [
+      {"term": "deadline", "translation": "காலக்கட்டம்", "language": "en"},
+      {"term": "project", "translation": "திட்டம்", "language": "en"},
+      {"term": "client", "translation": "வாடிக்கையாளர்", "language": "en"}
+    ],
+    "context": "Internal project email.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["email_structure", "deadline", "formal_register"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["திங்கள்"], "description": "Monday must appear."},
+      {"kind": "must_contain", "value": ["காலக்கட்டம்"], "description": "'deadline' glossary term must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional business content.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Check subject line translation and sign-off."
+  },
+  {
+    "id": "TEB-BEM-0002",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "ta->en",
+    "source_text": "தலைப்பு: விரைவு கூட்டம்\nஅன்பே அண்ட்ரே, நேற்று நிகழ்ந்த விற்பனை மாதாந்திர ஆய்வில் குறிப்பிட்ட சிக்கல்களை இன்று விடியல் 10 மணிக்கு ஆலோசிக்க வேண்டும். பங்கேற்றுகொள்ள முடியுமா?\nநன்றி, பிரபா",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate to a natural English business email preserving names, time (10 AM today), and the request.",
+    "references": [
+      "Subject: Urgent meeting\nDear Andre, the issues noted in yesterday's monthly sales review need to be discussed today at 10 AM. Can you attend? Thanks, Prabha",
+      "Subject: Urgent meeting\nDear Andre, please be available today at 10 AM to discuss the issues from yesterday's monthly sales review. Can you join? Regards, Prabha"
+    ],
+    "glossary": [
+      {"term": "விற்பனை மாதாந்திர ஆய்வு", "translation": "monthly sales review", "language": "ta"}
+    ],
+    "context": "Meeting request email.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["named_entity", "time_expression", "email_structure"],
+    "critical_constraints": [
+      {"kind": "entity_preservation", "value": "Andre", "description": "Recipient name Andre must be preserved."},
+      {"kind": "entity_preservation", "value": "Prabha", "description": "Sender name Prabha must be preserved."},
+      {"kind": "numeric_preservation", "value": "10", "description": "Meeting hour 10 must be preserved."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional people.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Names must not be transliterated into Tamil in the English output."
+  },
+  {
+    "id": "TEB-BEM-0003",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "en->ta",
+    "source_text": "Subject: Invoice #INV-2024-789\nPlease find attached the invoice for the consultancy services rendered in March. Payment is due within 15 days.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate to formal Tamil email preserving invoice number INV-2024-789, March, and the 15-day payment term.",
+    "references": [
+      "தலைப்பு: இலவசக் கணக்கு #INV-2024-789\nமார்ச் மாதத்தில் வழங்கப்பட்ட ஆலோசனை சேவைகளுக்கான இலவசக் கணக்கு இணைப்பில் உள்ளது. கட்டணம் 15 நாட்களுக்குள் செலுத்த வேண்டும்.",
+      "தலைப்பு: இலவசக் கணக்கு INV-2024-789\nமார்ச்சில் செய்த ஆலோசனை சேவைகளுக்கான இலவசக் கணக்கு இணைக்கப்பட்டுள்ளது. செலுத்தும் காலம் 15 நாட்கள்."
+    ],
+    "glossary": [
+      {"term": "invoice", "translation": "இலவசக் கணக்கு", "language": "en"},
+      {"term": "consultancy services", "translation": "ஆலோசனை சேவைகள்", "language": "en"},
+      {"term": "payment", "translation": "கட்டணம்", "language": "en"}
+    ],
+    "context": "Vendor invoice email.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["invoice_number", "date", "payment_terms"],
+    "critical_constraints": [
+      {"kind": "entity_preservation", "value": "INV-2024-789", "description": "Invoice number must be preserved exactly."},
+      {"kind": "numeric_preservation", "value": "15", "description": "15 days term must be preserved."},
+      {"kind": "must_contain", "value": ["மார்ச்", "மார்ச்சு"], "description": "March must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional invoice.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Alphanumeric codes must be copied verbatim."
+  },
+  {
+    "id": "TEB-BEM-0004",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "ta->en",
+    "source_text": "தலைப்பு: ஆலோசனை கூட்டம்\nஅன்பே ராஜா, நாம் அடுத்த வாரம் சென்னையில் உங்கள் நிறுவனத்திற்குச் சென்று உங்கள் குழுவினருடன் காரிக்குறித்த திட்டத்தை ஆலோசிக்கிறோம். சந்திப்பின் நேரம் மாற்றம் தேவையென்றால் தெரிவிக்கவும்.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate to English email preserving the Chennai visit, next week, and the offer to reschedule.",
+    "references": [
+      "Subject: Consultation meeting\nDear Raja, we will visit your company in Chennai next week and discuss the relevant project with your team. Please let us know if the meeting time needs to be changed.",
+      "Subject: Advisory meeting\nDear Raja, next week we are visiting Chennai to meet your team and discuss the project. Inform us if the timing must change."
+    ],
+    "glossary": [
+      {"term": "சென்னை", "translation": "Chennai", "language": "ta"},
+      {"term": "நிறுவனம்", "translation": "company", "language": "ta"}
+    ],
+    "context": "Consulting visit arrangement.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["location_entity", "schedule_change"],
+    "critical_constraints": [
+      {"kind": "entity_preservation", "value": "Chennai", "description": "Chennai must be preserved."},
+      {"kind": "entity_preservation", "value": "Raja", "description": "Name Raja must be preserved."},
+      {"kind": "must_contain", "value": ["next week"], "description": "Next week must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional people.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Keep the polite offer-to-reschedule clause."
+  },
+  {
+    "id": "TEB-BEM-0005",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "en->ta",
+    "source_text": "Subject: Leave approval\nDear HR, I would like to apply for two days of casual leave on 12 and 13 December for a family function. Please approve.\nSincerely, Karthik",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate into formal Tamil leave-application email preserving dates 12 and 13 December and two days.",
+    "references": [
+      "தலைப்பு: விடுமுறை அனுமதி\nஅன்பே மனிதவள மேலாண்மை, குடும்ப விழாவிற்காக டிசம்பர் 12 மற்றும் 13 ஆகிய நாட்களில் இரண்டு நாட்கள் இடைநிலை விடுமுறை கோருகிறேன். அனுமதிக்கவும்.\nநன்றி, கார்த்திக்",
+      "தலைப்பு: விடுமுறை கோரிக்கை\nஅன்பே மனித வள துறை, குடும்ப விழாவுக்காக டிசம்பர் 12 மற்றும் 13 இரண்டு நாட்களுக்கும் இடைநிலை விடுமுறை அனுமதி கோரிக்கிறேன். கார்த்திக்"
+    ],
+    "glossary": [
+      {"term": "casual leave", "translation": "இடைநிலை விடுமுறை", "language": "en"},
+      {"term": "leave", "translation": "விடுமுறை", "language": "en"}
+    ],
+    "context": "Leave application email.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["dates", "leave_type", "email_structure"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["12", "13"], "description": "Both dates must be preserved."},
+      {"kind": "must_contain", "value": ["டிசம்பர்", "திசம்பர்"], "description": "December must appear."},
+      {"kind": "entity_preservation", "value": "கார்த்திக்", "description": "Sender name Karthik must be transliterated."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional person.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Two-day count and both dates must survive translation."
+  },
+  {
+    "id": "TEB-BEM-0006",
+    "category": "business_email",
+    "task_type": "email_drafting",
+    "direction": "ta->en",
+    "source_text": "தலைப்பு: கருத்து\nஅன்பே ஆசிரியர், கணக்கின் முடிவை சரிபார்த்து கொண்டேன். இறுதி மொத்தம் ₹25,000 என்று காட்டப்படுகிறது. இது சரியா?\nநன்றி, மீனா",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate to English email preserving the amount ₹25,000 and the verification question.",
+    "references": [
+      "Subject: Feedback\nDear Sir, I have checked the account statement. The final total shows ₹25,000. Is this correct? Thanks, Meena",
+      "Subject: Feedback\nDear Teacher, I verified the account total. It shows ₹25,000. Is this right? Regards, Meena"
+    ],
+    "glossary": [
+      {"term": "மொத்தம்", "translation": "total", "language": "ta"}
+    ],
+    "context": "Account verification email with currency amount.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["currency_amount", "verification_question"],
+    "critical_constraints": [
+      {"kind": "numeric_preservation", "value": "25,000", "description": "Amount 25,000 must be preserved."},
+      {"kind": "must_contain", "value": ["₹25,000", "Rs. 25,000", "Rs 25,000", "INR 25,000", "25,000"], "description": "Amount must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional amounts.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Currency symbol or INR prefix must accompany the amount."
+  },
+  {
+    "id": "TEB-BEM-0007",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "en->ta",
+    "source_text": "Subject: Quarterly review rescheduled\nDear all, the quarterly performance review scheduled for Friday has been postponed to the following week due to a company event. New date will be shared soon.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate into formal Tamil preserving the postponement reason and Friday reference.",
+    "references": [
+      "தலைப்பு: கார்ட்டர் மதிப்பீடு மீண்டும் தீர்க்கப்பட்டது\nஅன்பே அனைவருக்கும், வெள்ளிக்கிழமை கார்ட்டர் செயல்திறன் மதிப்பீடு நிறுவன நிகழ்வால் அடுத்த வாரம் தள்ளி வைக்கப்பட்டது. புதிய தேதி விரைவில் தெரிவிக்கப்படும்.",
+      "தலைப்பு: கார்ட்டர் மதிப்பீடு நீக்கப்பட்டது\nஅனைவருக்கும், வெள்ளிக்கிழமை நிகழத் திட்டமான கார்ட்டர் மதிப்பீடு நிறுவன நிகழ்வு காரணமாக அடுத்த வாரத்திற்கு தள்ளிவைக்கப்பட்டது. புதிய நாள் விரைவில் தெரிவிக்கப்படும்."
+    ],
+    "glossary": [
+      {"term": "quarterly review", "translation": "கார்ட்டர் மதிப்பீடு", "language": "en"},
+      {"term": "postponed", "translation": "தள்ளி வைக்கப்பட்டது", "language": "en"}
+    ],
+    "context": "HR/ops announcement.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["rescheduling", "reason_clause"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["வெள்ளிக்கிழமை"], "description": "Friday must appear."},
+      {"kind": "must_contain", "value": ["தள்ளி", "நீக்க", "முக்கியமான"], "description": "Postponement must be expressed."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Postponement (not cancellation) is the critical meaning."
+  },
+  {
+    "id": "TEB-BEM-0008",
+    "category": "business_email",
+    "task_type": "email_drafting",
+    "direction": "ta->en",
+    "source_text": "தலைப்பு: புதிய கருவி அறிமுகம்\nஅன்பே குழு, எங்கள் புதிய தரவுத்தள கருவி அடுத்த வேலை நாளில் இயக்கத்திற்கு வருகிறது. அனைவருக்கும் பயிற்சி நிகழ்ச்சி மாலை 3 மணிக்கு நடத்தப்படுகிறது.\nநன்றி, குழு தலைமை",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate into English email preserving the launch date (next working day) and training at 3 PM.",
+    "references": [
+      "Subject: New tool introduction\nDear Team, our new database tool will go live on the next working day. A training session for everyone is scheduled at 3 PM.\nThanks, Team Lead",
+      "Subject: New tool rollout\nDear Team, the new database tool launches next business day. Training for all is at 3 PM. Regards, Team Lead"
+    ],
+    "glossary": [
+      {"term": "தரவுத்தளம்", "translation": "database", "language": "ta"},
+      {"term": "பயிற்சி நிகழ்ச்சி", "translation": "training session", "language": "ta"}
+    ],
+    "context": "Internal tool rollout announcement.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["glossary_terms", "time_expression"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["database", "Database"], "description": "Glossary term 'database' must appear."},
+      {"kind": "must_contain", "value": ["3 PM", "3 pm", "3:00", "at 3"], "description": "Training time must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "தரவுத்தளம் must be translated as database, not as 'data table'."
+  },
+  {
+    "id": "TEB-BEM-0009",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "en->ta",
+    "source_text": "Subject: Partnership proposal\nDear Sir/Madam, we are pleased to propose a partnership for the Tamil language learning program. Please find the proposal attached for your kind consideration.",
+    "source_script": "latin",
+    "source_language": "en",
+    "target_language": "ta",
+    "expected_behavior": "Translate into formal Tamil preserving the partnership proposal and attachment mention.",
+    "references": [
+      "தலைப்பு: கூட்டாண்மை முன்மொழிவு\nஅன்பே திரு/திருமதி, தமிழ் மொழி கற்றுக்கொள்ளும் திட்டத்திற்கான கூட்டாண்மையை முன்மொழிய மகிழ்ச்சியடைகிறோம். உங்கள் நன்மையான கருத்துக்காக முன்மொழிவு இணைப்பில் உள்ளது.",
+      "தலைப்பு: கூட்டாண்மை பரிந்துரை\nஅன்பே அப்பா, தமிழ் கற்றுக்கொள்ளும் திட்டத்துக்கான கூட்டாண்மை முன்மொழிவு இணைக்கப்பட்டுள்ளது."
+    ],
+    "glossary": [
+      {"term": "partnership", "translation": "கூட்டாண்மை", "language": "en"},
+      {"term": "proposal", "translation": "முன்மொழிவு", "language": "en"}
+    ],
+    "context": "Formal partnership proposal.",
+    "difficulty": "hard",
+    "register": "formal",
+    "phenomena": ["formal_salutation", "attachment_reference"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["கூட்டாண்மை"], "description": "'partnership' glossary term must appear."},
+      {"kind": "must_contain", "value": ["இணைப்பில்", "இணைக்கப்பட்ட", "சேர்க்கப்பட்ட"], "description": "Attachment mention must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Sir/Madam salutation should become respectful Tamil address."
+  },
+  {
+    "id": "TEB-BEM-0010",
+    "category": "business_email",
+    "task_type": "email_translation",
+    "direction": "ta->en",
+    "source_text": "தலைப்பு: கருத்து தொகுப்பு\nஅன்பே அண்டர்சன், கடந்த மாதம் விழிப்புடன் எழுந்த உங்கள் கருத்துகள் மிகவும் பயன்படக் கூடியவை. அவை எங்கள் தயாரிப்பு மேம்பாட்டிற்கு உதவியாக இருந்தன.\nநன்றி, சல்மா",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "en",
+    "expected_behavior": "Translate into English email preserving the thanks for last month's feedback and its usefulness.",
+    "references": [
+      "Subject: Feedback collection\nDear Anderson, your feedback last month was very useful. It helped our product improvement. Thanks, Salma",
+      "Subject: Feedback review\nDear Anderson, thank you for the thoughtful feedback you shared last month; it has helped our product improvement. Regards, Salma"
+    ],
+    "glossary": [
+      {"term": "கருத்து", "translation": "feedback", "language": "ta"},
+      {"term": "தயாரிப்பு மேம்பாடு", "translation": "product improvement", "language": "ta"}
+    ],
+    "context": "Thank-you email after feedback.",
+    "difficulty": "medium",
+    "register": "formal",
+    "phenomena": ["named_entity", "appreciation"],
+    "critical_constraints": [
+      {"kind": "entity_preservation", "value": "Anderson", "description": "Name Anderson must be preserved."},
+      {"kind": "entity_preservation", "value": "Salma", "description": "Name Salma must be preserved."},
+      {"kind": "must_contain", "value": ["feedback", "Feedback"], "description": "'feedback' must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional people.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Names must remain in Latin script."
+  }
+]

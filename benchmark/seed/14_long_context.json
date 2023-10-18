@@ -1,0 +1,297 @@
+[
+  {
+    "id": "TEB-LNG-0001",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->ta",
+    "source_text": "பயனர்: என் சகோதரி ராஜி மருத்துவர்.\nபயனர்: அவள் சென்னையில் பணியாற்றுகிறாள்.\nபயனர்: அவள் குறித்து என்ன சொல்லலாம்?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Maintain context: refer to Raji, the sister, a doctor working in Chennai.",
+    "references": [
+      "உங்கள் சகோதரி ராஜி ஒரு மருத்துவர்; அவர் சென்னையில் பணியாற்றுகிறார்.",
+      "ராஜி என்ற உங்கள் சகோதரி மருத்துவராகவும் சென்னையில் பணியாற்றுவராகவும் உள்ளார்.",
+      "உங்கள் சகோதரி ராஜி சென்னையில் மருத்துவராக பணியாற்றுகிறார்."
+    ],
+    "glossary": [],
+    "context": "Three-turn dialogue with coreference to 'அவள்'.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["coreference", "multi_turn", "entity_tracking"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["ராஜி"], "description": "Name Raji must appear."},
+      {"kind": "must_contain", "value": ["மருத்துவர்"], "description": "Profession doctor must appear."},
+      {"kind": "must_contain", "value": ["சென்னை"], "description": "City Chennai must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional person.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Model must not lose the sister relationship or profession across turns."
+  },
+  {
+    "id": "TEB-LNG-0002",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "mixed->en",
+    "source_text": "User: My name is Arul and I work in a bank.\nUser: என் மருத்துவர் சைன் கொண்டிருக்கேன்.\nUser: What does my profile say about me?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Combine both turns: name Arul, works in a bank, has a medical certificate/note from the doctor.",
+    "references": [
+      "Your profile says: your name is Arul, you work in a bank, and you have a medical certificate from your doctor.",
+      "Arul, bank employee, holding a doctor's medical note.",
+      "You are Arul, you work in a bank, and you have a medical certificate."
+    ],
+    "glossary": [],
+    "context": "Mixed-language profile summary over two turns.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["coreference", "code_mixing", "multi_turn"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["Arul"], "description": "Name Arul must appear."},
+      {"kind": "must_contain", "value": ["bank", "Bank"], "description": "Bank job must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional person.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Cross-turn entity merge; சைன் = certificate/note."
+  },
+  {
+    "id": "TEB-LNG-0003",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->ta",
+    "source_text": "பயனர்: நான் இரண்டு கால்படங்கள் வைத்திருக்கிறேன்.\nபயனர்: அவற்றில் ஒன்றின் பெயர் பால்.\nபயனர்: மற்றொன்றின் பெயர் என்ன என்று சொல்லு.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Reason over context: user has two cows; one is named Paal; state that the other cow's name was not provided.",
+    "references": [
+      "உங்கள் கால்படங்களில் ஒன்றின் பெயர் பால்; மற்றொன்றின் பெயர் உங்களால் கூறப்படவில்லை.",
+      "இரண்டாவது கால்படத்தின் பெயர் என்ன என்பது தெரியவில்லை; பால் என்ற பெயர் கொண்டது ஒன்று மட்டுமே குறிப்பிடப்பட்டுள்ளது.",
+      "மற்ற கால்படத்தின் பெயர் தெரியவில்லை; உங்கள் கூற்றில் அது குறிப்பிடப்படவில்லை."
+    ],
+    "glossary": [],
+    "context": "Two-turn fact tracking with a missing second fact.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["negation_of_knowledge", "multi_turn", "hallucination_resistance"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["பால்"], "description": "Cow name Paal must appear."},
+      {"kind": "must_contain", "value": ["தெரியவில்லை", "குறிப்பிடப்படவில்லை", "தெரியாது", "கூறப்படவில்லை"], "description": "Must acknowledge the other name is unknown."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional names.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Hallucination trap: model must NOT invent a second name."
+  },
+  {
+    "id": "TEB-LNG-0004",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "en->ta",
+    "source_text": "User: I ordered a blue shirt, size M.\nUser: Please change it to size L.\nUser: என்ன மாற்றப்பட்டது என்பதைத் தமிழில் சொல்லுங்கள்.",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "ta",
+    "expected_behavior": "Answer in Tamil: the blue shirt order was changed from size M to size L.",
+    "references": [
+      "நீல ஷர்ட் ஆர்டர் M அளவில் இருந்து L அளவாக மாற்றப்பட்டது.",
+      "உங்கள் நீல ஷர்ட் அளவு M லிருந்து L ஆக மாற்றப்பட்டது.",
+      "நீலத் துணியின் அளவு M ஆகிரத்தில் L ஆக மாற்றப்பட்டது."
+    ],
+    "glossary": [
+      {"term": "size", "translation": "அளவு", "language": "en"}
+    ],
+    "context": "Order modification over two turns, then Tamil answer request.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["multi_turn", "state_update", "language_switch"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["நீல", "நில"], "description": "Blue shirt must be mentioned."},
+      {"kind": "must_contain", "value": ["L"], "description": "New size L must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional order.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Must track the state change M → L."
+  },
+  {
+    "id": "TEB-LNG-0005",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->en",
+    "source_text": "User: என் வீடு மதுரையில் உள்ளது.\nUser: என் தாத்தா அங்கே வசிக்கிறார்.\nUser: Where does my grandfather live?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Answer in English: your grandfather lives in Madurai (at your house).",
+    "references": [
+      "Your grandfather lives in Madurai, at your house.",
+      "He lives in Madurai.",
+      "Your grandfather lives in Madurai."
+    ],
+    "glossary": [
+      {"term": "மதுரை", "translation": "Madurai", "language": "ta"}
+    ],
+    "context": "Two Tamil turns then English question.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["coreference", "language_switch", "entity_tracking"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["Madurai", "madurai"], "description": "City Madurai must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Cross-language coreference: 'அங்கே' = at the house in Madurai."
+  },
+  {
+    "id": "TEB-LNG-0006",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->ta",
+    "source_text": "பயனர்: நான் வாரமுக்கு மூன்று முறை பருகும் வகையில் விளையாட்டு விளையாடுகிறேன்.\nபயனர்: இன்று நான் விளையாடவில்லை.\nபயனர்: என் வாரத்தின் மொத்த விளையாட்டுகள் எத்தனை?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Reason: 3 per week but skipped today, so answer 2 times this week (assuming today is counted in the week).",
+    "references": [
+      "இந்த வாரம் நீங்கள் இரண்டு முறை விளையாட்டு விளையாடினீர்கள் (மூன்று முறை திட்டமிட்டு ஒன்றை இன்று தவிர்த்தீர்கள்).",
+      "வாரத்தில் மூன்று முறை விளையாடுவதற்கு நீங்கள் இன்று விளையாடவில்லை; எனவே இரண்டு முறை விளையாடினீர்கள்.",
+      "இன்று தவிர்த்ததால் இந்த வாரம் இரண்டு முறை விளையாடினீர்கள்."
+    ],
+    "glossary": [],
+    "context": "Simple arithmetic over dialogue context.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["multi_turn_reasoning", "counting", "negation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["இரண்டு", "2"], "description": "Answer must be 2 (or explain the reasoning to 2)."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Ambiguity: if the week is not yet over, '2 so far' is the correct framing."
+  },
+  {
+    "id": "TEB-LNG-0007",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->ta",
+    "source_text": "பயனர்: என் விருப்ப வண்ணம் சிவப்பு.\nபயனர்: என் விருப்ப பழம் தார்ப்பழம்.\nபயனர்: என் விருப்பங்களைத் திரையில் எழுதுக.",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "List the stated preferences: favorite color red, favorite fruit jackfruit.",
+    "references": [
+      "உங்கள் விருப்ப வண்ணம்: சிவப்பு. உங்கள் விருப்ப பழம்: தார்ப்பழம்.",
+      "விருப்ப வண்ணம் — சிவப்பு; விருப்ப பழம் — தார்ப்பழம்.",
+      "உங்கள் விருப்பங்கள்: சிவப்பு வண்ணம், தார்ப்பழம்."
+    ],
+    "glossary": [
+      {"term": "தார்ப்பழம்", "translation": "jackfruit", "language": "ta"}
+    ],
+    "context": "Preference recall over two turns.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["preference_tracking", "list_generation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["சிவப்பு"], "description": "Favorite color red must appear."},
+      {"kind": "must_contain", "value": ["தார்ப்பழம்"], "description": "Favorite fruit jackfruit must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Both preferences must be retained."
+  },
+  {
+    "id": "TEB-LNG-0008",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->en",
+    "source_text": "User: எனக்கு இரவு 9 மணிக்கு டிரைன் வருகிறது.\nUser: ஆனால் அது 30 நிமிடம் தாமதமாகிறது.\nUser: What time will my train arrive now?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Compute: 9:00 PM + 30 minutes delay = 9:30 PM arrival.",
+    "references": [
+      "Your train will arrive at 9:30 PM (30 minutes late).",
+      "The train now arrives at 9:30 PM.",
+      "9:30 PM, because of the 30-minute delay."
+    ],
+    "glossary": [],
+    "context": "Time arithmetic over two turns.",
+    "difficulty": "hard",
+    "register": "neutral",
+    "phenomena": ["time_arithmetic", "delay", "multi_turn"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["9:30", "9.30", "nine thirty"], "description": "Arrival time 9:30 PM must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional schedule.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Must add the delay, not repeat the original time."
+  },
+  {
+    "id": "TEB-LNG-0009",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->ta",
+    "source_text": "பயனர்: என் மொழிகள்: தமிழ், ஆங்கிலம், இந்தி.\nபயனர்: இந்தி மொழியை நிறுத்திவிட்டேன்.\nபயனர்: இப்போது என் மொழிகள் யாவை?",
+    "source_script": "tamil",
+    "source_language": "ta",
+    "target_language": "ta",
+    "expected_behavior": "Update state: Tamil and English remain; Hindi dropped.",
+    "references": [
+      "இப்போது உங்கள் மொழிகள் தமிழ் மற்றும் ஆங்கிலம் மட்டுமே. இந்தி மொழி நிறுத்தப்பட்டது.",
+      "தமிழ் மற்றும் ஆங்கிலம். இந்தி இனி உங்கள் மொழிகளில் இல்லை.",
+      "உங்கள் தற்போதைய மொழிகள்: தமிழ், ஆங்கிலம் (இந்தி நிறுத்தப்பட்டது)."
+    ],
+    "glossary": [],
+    "context": "List update over two turns.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["state_update", "list_removal", "multi_turn"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["தமிழ்"], "description": "Tamil must appear."},
+      {"kind": "must_contain", "value": ["ஆங்கிலம்"], "description": "English must appear."},
+      {"kind": "must_not_contain", "value": ["இந்தி மொழிகள்: தமிழ், ஆங்கிலம், இந்தி", "மொழிகள்: தமிழ், ஆங்கிலம், இந்தி"], "description": "Must not still list Hindi as a current language."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Tests state update: Hindi must be removed."
+  },
+  {
+    "id": "TEB-LNG-0010",
+    "category": "long_context_multiturn",
+    "task_type": "multi_turn_response",
+    "direction": "ta->en",
+    "source_text": "User: என் மகள் 8 வயது.\nUser: அவளுக்கு பள்ளி சாலைக்கு 2 கி.மீ நடந்து செல்ல வேண்டும்.\nUser: How far does she walk to school and how old is she?",
+    "source_script": "mixed",
+    "source_language": "ta+en",
+    "target_language": "en",
+    "expected_behavior": "Combine facts: daughter is 8 years old and walks 2 km to school.",
+    "references": [
+      "Your daughter is 8 years old and walks 2 km to school.",
+      "She is 8 and walks 2 kilometres to school.",
+      "Age 8; school distance 2 km on foot."
+    ],
+    "glossary": [],
+    "context": "Two-fact recall across turns.",
+    "difficulty": "medium",
+    "register": "neutral",
+    "phenomena": ["multi_turn", "fact_aggregation", "numeric_preservation"],
+    "critical_constraints": [
+      {"kind": "must_contain", "value": ["8"], "description": "Age 8 must appear."},
+      {"kind": "must_contain", "value": ["2 km", "2 km", "two km", "2 kilometres", "2 kilometres"], "description": "Distance 2 km must appear."}
+    ],
+    "provenance": "synthetic",
+    "provenance_note": "Authored for TEB v1.0.0; fictional person.",
+    "license": "CC-BY-4.0",
+    "annotation_notes": "Both numbers must survive into the English answer."
+  }
+]
